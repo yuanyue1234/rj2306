@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel Background</title>
+    <!-- <link rel="stylesheet" href="styles.css"> --> 
+    	<!--将样式表文件链接到CSS文件中-->
+     <style>
+	.carousel-container {  
+    position: relative;  /*相对位置*/
+    width: 100%;  
+    height: 740px;
+   /* height: 100%vh;*/ /* 根据你的需要设置高度 */  
+    overflow: hidden;  /*隐藏溢出内容(容器)*/
+  }  
+    
+  .carousel-images {  
+    display: flex;  
+    transition: transform 0.5s ease; 
+    /*transition过渡  transform过渡效果的持续时间 旋转的速度曲线遵循 ease缓动函数*/
+  }  
+    
+  .carousel-images img {
+  	height: 100%;  
+    width: 100%;  
+    flex-shrink: 0;  /*告诉浏览器这个项目不应该缩小，即使flex容器内的空间不足*/
+    /*min-width: 100%;  /*告诉浏览器该元素的最小宽度应该是其父元素宽度的100%*/*/
+  }  
+    
+  .prev-btn, .next-btn {  
+    position: absolute;  
+    top: 50%;  
+    transform: translateY(-50%);  
+    /*元素会向上移动其自身高度的50%。这通常与绝对定位一起使用，以实现元素的垂直居中*/
+    font-size: 3em;  
+    background: none;  
+    border: none;  /*边框*/
+    cursor: pointer;  /*小手*/
+  }  
+    
+  .prev-btn { left: 10px; }  
+  .next-btn { right: 10px; }  
+    
+  .carousel-overlay {  
+    position: absolute;  
+    top: 35%;  
+    left: 35%;  
+    width: 300px;  
+    height: 200px;  
+    display: flex;  
+    align-items: center;  /*子元素在交叉轴居中*/
+    /*align-items（cross axis）上的对齐方式。*/
+    justify-content: center;  /*子元素在主轴居中*/
+    /*控制flex容器内部子元素在主轴（main axis）上的对齐方式*/
+    color: white; /* 根据背景图片调整文字颜色 */  
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景 */  
+    z-index: 1;  
+    /*控制元素的堆叠顺序（即哪个元素应该位于其他元素的前面或后面） 值越大的元素在堆叠顺序中越靠前（即更接近用户），而值越小的元素则越靠后*/
+  }  
+    
+  .carousel-overlay button {  
+    margin: 0 10px;  
+  }
+
+     </style>
+     
+     
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <button class="prev-btn">&lt;</button>
+        <div class="carousel-images">
+            <img src="img/1.jpg" alt="Image 1">
+            
+            <!-- 添加更多图片... -->
+            
+            <!--alt属性为图像提供了替代文本。
+		              当图像由于某种原因（如网络错误、文本浏览器或辅助技术如屏幕阅读器）无法显示时，会显示这个替代文本。
+		             在这个例子中，替代文本是“Image 1”-->
+		             
+        </div>
+        <button class="next-btn">&gt;</button><!--'&gt代表>
+
+        <!-- 这里的按钮和内容可以放置在你的轮播图上方 -->
+        <div class="carousel-overlay">
+            <p>欢迎</p>
+            <a href="register.html" >注册</a>  
+            <a href="login.html" >登录</a>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+<script >
+	
+</script>

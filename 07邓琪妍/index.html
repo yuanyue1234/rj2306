@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>注册页面</title>
+<link rel="stylesheet" href="css/游戏页面.css">
+<script src="js/游戏页面.js" defer></script>
+</head>
+<body>
+  <div class="carousel">
+    <div class="slides">
+      <img src="img/20181214074330_jk3XF.jpeg" style="display: block;"alt="Image 1" class="slide">
+      <img src="img/img/R-C.jpg"alt="Image 2" class="slide">
+      <img src="img/img/20200313234046_sfswu.jpg" alt="Image 3" class="slide">
+    </div>
+	</div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1>动画城入口</h1>
+  <form id="registration-form">
+    <label for="username">昵称:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">邮箱:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">密钥:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="country">区域:</label>
+    <select id="country" name="country">
+      <option value="">--请选择版块--</option>
+      <option value="usa">梦之国</option>
+      <option value="uk">希之翼</option>
+      <option value="canada">光之国</option>
+    </select>
+
+    <input type="submit" value="进入">
+  </form>
+
+
+</body>
+</html>

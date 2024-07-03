@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>王洪铭的注册下拉轮播图</title>
+	
+	<link rel="stylesheet" href="css/chj.css">
+			
+	
+</head>
+<body>
+	<div id="main">
+		<div id="nav">
+			<ul class="ulone">
+				<li class="img1"><img src="img/huang.jpg" alt="" />
+				</li>
+				<li class="img2"><img src="img/huangxi.jpg" alt="" />
+				</li>
+				<li class="img3"><img src="img/leidi.jpg" alt="" />
+				</li>
+			</ul>
+			<a href="#" class="left"><</a>
+			<a href="#" class="right">></a>
+		</div>
+			
+		<div id="zhuce">
+			<h1>登录</h1>
+				<div class="row">
+					<label>手机号: </label>
+					<input type="tel" autocomplete="off" 
+					 class="inp"  maxlength="11" id="mobile" 
+					oninput="checkMobile"/>
+					<div class="warn-tip" id="mobileTip"></div>
+				</div>
+				<div class="row">
+					<label>验证码: </label>
+					<input type="tel" autocapitalize="off" 
+					class="inp" maxlength="4" style="width: 120px;" 
+					id="code"
+						oninput="checkCode()">
+				<div class="code dis" onclick="getCode()" id="codeMsg">获取验证码</div>
+				<div class="warn-tip" id="codeTip"></div>
+				</div>
+				<div class="submit dis" id="submit" onclick="loginF()">登录</div>
+				<div class="foot">
+					<label><input type="checkbox" checked>已阅读</label>
+					<a>用户协议</a>
+				</div>
+				
+				
+				
+				
+				
+				
+				<ul class="ultwe">
+					<li class="litwe">其他登录方式
+						<ul class="ult">
+							<li class="lit">
+								QQ登录
+							</li>
+							<li class="lit">
+								微信登录
+							</li>
+							<li class="lit">
+								微博登录
+							</li>
+						</ul>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+		
+		
+		<script src="js/chj.js"></script>
+
+		
+</body>
+</html>

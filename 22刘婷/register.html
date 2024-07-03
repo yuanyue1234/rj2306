@@ -1,0 +1,78 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Login Page</title>  
+<style>
+    /* 样式略，根据你的需求来设置 */  
+.hidden {  
+  display: none;  
+}  
+  
+.login-window {  
+  /* 居中显示登录窗口的样式 */  
+  position: fixed;  
+  top: 50%;  
+  left: 50%;  
+  transform: translate(-50%, -50%);  
+  /* 其他样式... */  
+}
+body {  
+    background-image: url("./img/5.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+</style> 
+</head>  
+<body>  
+  
+<!-- 登录页面（初始隐藏） -->  
+<div id="login-page">  
+  <div class="login-window">  
+    <form id="login-form">  
+      <label for="username">账号:</label> 
+      <input type="text" id="username" required>   <br>
+      <label for="password">密码:</label>  
+      <input type="password" id="password" required>  <br>
+      <button type="submit">注册</button>  
+    </form>  
+  </div>  
+</div>  
+  
+<!-- <script src="script.js"></script> -->
+ <script>
+    function validateForm() {  
+  const username = document.getElementById('username').value;  
+  const password = document.getElementById('password').value;  
+    
+  // 账号必须在3-8位之间  
+  const usernameRegex = /^[a-zA-Z0-9]{3,8}$/;  
+  if (!usernameRegex.test(username)) {  
+    alert('账号必须在3-8位之间');  
+    return false;  
+  }  
+    
+  // 密码必须包含大小写字母  
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).+$/;  
+  if (!passwordRegex.test(password)) {  
+    alert('密码必须包含大小写字母');  
+    return false;  
+  }  
+    
+  // 表单验证通过，可以提交或进行其他操作  
+  return true;  
+}  
+  
+// 为登录表单添加提交事件监听器  
+document.getElementById('login-form').addEventListener('submit', function(event) {  
+  event.preventDefault(); // 阻止表单默认提交行为  
+  if (validateForm()) {  
+    // 表单验证通过，执行登录逻辑（这里只是简单提示）  
+    alert('登录成功！');  
+    // 实际开发中可能是发送Ajax请求到服务器进行验证  
+  }  
+});  
+ </script>
+</body>  
+</html>

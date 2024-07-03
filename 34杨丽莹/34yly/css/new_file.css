@@ -1,0 +1,167 @@
+*{
+            margin: 0;
+            padding: 0;
+        }
+        .wp{
+            width: 250px;
+            height: 400px;
+            margin: 40px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #list{
+            display: flex;
+            width: 1000px;
+            transform: translateX(0);
+            /* 添加过渡动画 */
+            transition: all 1s;
+        }
+        .wp div img{
+            width: 250px;
+            height: 400px;
+        }
+        #box {
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box span {
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        #box span:hover{
+            background: pink;
+            box-shadow: 0 0 0 2px #ccc;
+        }
+        #r{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 170px;
+            right: 0;
+            background: url(./images/右箭头.png)no-repeat 0 0/100% 100%;
+        }
+        #l{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 170px;
+            left: 0;
+            background: url(./images/左箭头\ \(1\).png)no-repeat 0 0/100% 100%;
+        }
+
+*{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.daohanglan{
+	background-color: darkgrey;
+	height: 40px;
+	width: 100%;
+}
+.hezi1{
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	margin: auto;
+}
+.hezi1 ul{
+	display: flex;
+}
+.hezi1 ul li{
+	margin-right: 5px;
+}
+.hezi1 div{
+	line-height: 40px;
+}
+.hezi1 select{
+	background-color: darkgrey;
+	border: none;
+}
+.one ul li{
+	font-size: 12px;
+}
+.two ul li{
+	font-size: 12px;
+}
+.one ul li:nth-child(1){
+	color: coral;
+}
+.er{
+    margin-top: 30px;
+   display: flex;
+    list-style: none;
+  border-top: 1px solid #ccc;
+border-bottom: 1px solid #ccc;
+height: 40px;
+line-height: 40px;
+}
+h2{
+    margin-left: 300px;
+}
+h4{
+    position: relative;
+    top: -38px;left: 383px;
+}
+h6{
+    position: relative;
+    top: -69px;left: 299px;
+}
+       .big{
+     margin-top: 80px;
+     margin-left: 360px;
+       } 
+ .big ul{display: flex;}
+ .big li{
+    border-radius: 1px;
+list-style: none;
+height: 30px;border: 1.5px solid #ccc;}
+.number  li:nth-child(2){width: 105px;border-right: none;}
+.number  li:nth-child(1){width: 85px;border-right: none;border: none;}
+.number  li:nth-child(3){width: 185px;}
+.yc  li:nth-child(3){width: 92px;border-left: none;}
+.yc  li:nth-child(2){width: 200px;border-right: none;}
+.yc  li:nth-child(1){width: 85px;border: none;text-align: center;}
+input[type="text"]{
+    height: 26px; 
+    border: none;
+    width: 176px;
+    outline: none;
+}
+select{border: none;
+    outline: none;}
+    .btn{
+        height: 29px;
+        width: 90px;
+        background-color: white;
+        border: none;
+        color: orange;
+    }
+    .btn2{
+        width: 295px;
+        height: 30px;
+        margin-left: 126px;
+        margin-top: 28px;
+background-color: orange;
+text-align: center;
+color: white;
+border: none;
+border-radius: 3px;
+    }
+    .dx{margin-left: 117px;
+    margin-top: 30px;}
+    .qh{
+        margin-top: 30px;
+        margin-left: 301px;
+    }

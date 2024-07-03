@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	<body>
+		
+		<div class="daohanglan">
+			<div class="hezi1">
+				<div class="one">
+					<ul>
+						<li>亲，请登录</li>
+						<li>免费注册</li>
+						<li>手机逛淘宝</li>
+						<li>网页无障碍</li>
+					</ul>
+				</div>
+				<div class="two">
+					<ul>
+						<li>淘宝网首页</li>
+						<li>
+							<select name="">
+								<option value="">我的淘宝</option>
+							</select>
+						</li>
+						<li>购物车</li>
+						<li>
+							<select name="">
+								<option value="">收藏夹</option>
+							</select>
+						</li>
+						<li>商品分类</li>
+						<li>免费开店</li>&nbsp;&nbsp;|&nbsp;
+						<li>
+							<select name="">
+								<option value="">千牛卖家中心</option>
+							</select>
+						</li>
+						<li>
+							<select name="">
+								<option value="">联系客服</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><br>
+    <h2><font color="orange">淘宝网</font></h2>
+ <h4>用户注册</h4>
+ <h6><font color="orange">Taobao.com</font></h6>
+ 
+   <div id="zc">
+   						<div id="bt">
+   							<input id="dl" type="button" value="注册"/>
+   							<input id="dl" type="button" value="登录"/>
+   						</div>
+   						<div id="zt">
+   							<h2>创建账号 缘分速达</h2>
+   						</div>
+   						<div id="zhang">
+   							账号
+   							<input id="zh" type="text" placeholder="手机"/>
+   						</div>
+   						<div id="minm">
+   							密码
+   							<input id="mm" type="password" placeholder="含字母和数字的6-16位密码"/>
+   						</div>
+   						<div id="qrmm">
+   							确认密码
+   							<input id="qrm" type="password" placeholder="确认密码"/>
+   						</div>
+   						<div id="gx">
+   								<input id="ty" type="checkbox"/><a href="www.baidu.com">已经阅读并同意</a>
+   							</div>
+   						<div id="ff">
+   							  <input id="fuf" type="button" value="付费注册"/>
+   						</div>
+   						</div>
+   						
+   					</div>
+   			  </div>
+   			  <!-- 中间末端 -->
+   		   </div>
+
+</div>
+   </div>
+  <script>
+  		   //正则验证
+  		   // 以^开头$结尾
+  		   //1有什么用什么 用[]
+  		   //2有多少， 用{}
+  		   const mmyz=/^[0-9a-zA-Z]{8,12}$/
+  		   const zhyz=/^1[0-9]{10}$/
+  		   var zz=document.getElementById("zc")
+  		   var zhanh=document.getElementById("zh")
+  		   var mima=document.getElementById("mm")
+  		   var qrmm=document.getElementById("qrm")
+  		   var goux=document.getElementById("ty")
+  		   var fufei=document.getElementById("fuf")
+  		   fufei.onclick=function zc(){
+  		   if(zhanh.value===""){
+  			   alert("账号不能为空")
+  		   }else if(zhyz.test(zhanh.value)==false){
+  			   alert("手机号格式不对")
+  		   }else if(mmyz.test(mima.value)==false){
+  			   alert("密码格式不对,长度为8-12位，不能用特殊数字符")
+  		   }else if(mima.value===""){
+  			   alert("密码不能为空")
+  		   }else if(qrmm.value!==mima.value){
+  			   alert("俩次密码不一致，请重新输入")
+  		   }else if(goux.checked==false){
+  			   alert("请勾选")
+  		   }else{
+  			   alert("恭喜注册成功")
+  		       zz.style.display="none";
+  		   }
+  		   };
+  	   </script>
+ <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    关于淘宝&nbsp;&nbsp;&nbsp;合作伙伴&nbsp;&nbsp;&nbsp;营销中心&nbsp;&nbsp;&nbsp;联系客服&nbsp;&nbsp;&nbsp;开放平台&nbsp;&nbsp;&nbsp;联系我们&nbsp;&nbsp;&nbsp;网站地图&nbsp;&nbsp;&nbsp;法律声明以及隐私政策
+ </div>
+   
+   
+   <div class="wp">
+       <div id="list">
+           <img src="img/p1.webp"alt="">
+           <img src="img/p2.webp"alt="">
+           <img src="img/p3.webp" alt="">
+       </div>
+	  
+       <!-- 分页器 -->
+       <div id="box">
+            <span></span>
+            <span></span>
+            <span></span>
+           
+       </div>
+       <div id="r"></div>
+       <div id="l"></div>
+	   
+   </div>
+   
+	</body>
+</html>
+<script>
+	
+    // 获取需要点击的分页器
+    let box = document.getElementById('box');
+    let spanBox = box.getElementsByTagName('span');
+    // 获取列表元素
+    let list = document.getElementById('list');
+ 
+    // 点击分页器
+	
+    spanBox[0].onclick = function () {
+        list.style.transform='translateX(0px)'
+    };
+    spanBox[1].onclick = function () {
+        list.style.transform='translateX(-250px)'
+        console.log('点击了第二个图片');
+    };
+    spanBox[2].onclick = function () {
+        list.style.transform='translateX(-500px)'
+    };
+    spanBox[3].onclick = function () {
+        list.style.transform='translateX(-750px)'
+    };
+    
+    let n = 0;
+    let r = document.getElementById('r');
+    let l = document.getElementById('l');
+    r.onclick = function (){
+        n<3? n++ :n;
+        console.log(n);
+        list.style.transform='translateX(-'+n*250+'px)'
+    };
+    l.onclick = function (){
+        n>0? n-- :n=0;
+        console.log(n);
+        list.style.transform='translateX(-'+n*250+'px)'
+    };
+</script>
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Carousel</title>  
+<style>  
+  /* 样式略，可以根据需要添加 */  
+  .carousel-images {  
+    display: flex;  
+    overflow-x: auto;  
+    scroll-snap-type: x mandatory;  
+	align-items: center;/* 确保图片在容器中垂直居中 */ 
+  }  
+  .carousel-image {  
+    flex: 0 0 auto;  
+    width: 1200px;  
+    height: 800px; /* 根据需要设置高度 */  
+     display: flex;
+	 
+    
+  }  
+  .carousel-controls {  
+    display: flex;  
+    justify-content: space-between;  
+    margin-top: 10px;  
+  }  
+  button {  
+    padding: 5px 10px;  
+  }  
+</style>  
+</head>  
+<body>  
+  
+<div class="carousel">  
+  <div class="carousel-images" id="carouselImages">  
+    <!-- 假设你有4张图片 -->  
+    <img class="carousel-image" src="img/d4b538f74580a643f4e21b7ee3acb536d89f29e6.jpg" alt="Image 1">  
+    <img class="carousel-image" src="img/u=1041272180,1079608775&fm=253&app=138&f=JPEG.jpg" alt="Image 2">  
+    <img class="carousel-image" src="img/u=1572341087,3696467206&fm=253&app=138&f=JPEG.jpg" alt="Image 3">  
+    <img class="carousel-image" src="img/u=1604357857,1756889050&fm=253&app=138&f=JPEG.jpg" alt="Image 4">  
+	<img class="carousel-image" src="img/u=3482101253,1545252024&fm=253&app=138&f=JPEG.jpg" alt="Image 5">
+	<img class="carousel-image" src="img/u=2781634011,2898737521&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="Image 6">  
+	<img class="carousel-image" src="img/u=3455248897,1100392002&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="Image 7">  
+	<img class="carousel-image" src="img/src=http___img.alicdn.com_bao_uploaded_i1_2361499005_O1CNA1yiQUpc2GOLC83kL32_!!2361499005-0-psf.jpg&refer=http___img.alicdn.webp" alt="Image 8">  
+  </div>  
+  <div class="carousel-controls">  
+    <button id="prevButton">Prev</button>  
+    <button id="nextButton">Next</button>  
+  </div>  
+</div>  
+  
+<script>  
+  document.addEventListener('DOMContentLoaded', function() {  
+    const carouselImages = document.getElementById('carouselImages');  
+    const images = carouselImages.getElementsByTagName('img');  
+    let currentIndex = 0;  
+    const imageWidth = images[0].offsetWidth; // 假设所有图片宽度相同  
+    let autoplayInterval; // 用于存储自动播放的定时器ID  
+    
+    function goToSlide(index) {  
+      carouselImages.scrollLeft = index * imageWidth;  
+      currentIndex = index;  
+    }  
+    
+    // 自动播放逻辑  
+    function startAutoplay() {  
+      autoplayInterval = setInterval(function() {  
+        if (currentIndex < images.length - 1) {  
+          currentIndex++;  
+        } else {  
+          currentIndex = 0; // 如果到达最后一张图片，回到第一张  
+        }  
+        goToSlide(currentIndex);  
+      }, 3000); // 每3秒切换一次图片  
+    }  
+    
+    // 停止自动播放  
+    function stopAutoplay() {  
+      clearInterval(autoplayInterval);  
+    }  
+    
+    document.getElementById('prevButton').addEventListener('click', function() {  
+      if (currentIndex > 0) {  
+        goToSlide(currentIndex - 1);  
+        stopAutoplay(); // 停止自动播放，用户可能想要手动浏览  
+        startAutoplay(); // 立即重新开始自动播放  
+      }  
+    });  
+    
+    document.getElementById('nextButton').addEventListener('click', function() {  
+      if (currentIndex < images.length - 1) {  
+        goToSlide(currentIndex + 1);  
+        stopAutoplay(); // 停止自动播放，用户可能想要手动浏览  
+        startAutoplay(); // 立即重新开始自动播放  
+      }  
+    });  
+    
+    // 页面加载完成后开始自动播放  
+    startAutoplay();  
+    
+    // 如果你想要在某个事件（如鼠标悬停）上停止自动播放，你可以添加额外的监听器来调用stopAutoplay函数  
+    // 例如，监听carouselImages的mouseover和mouseout事件  
+    carouselImages.addEventListener('mouseover', stopAutoplay);  
+    carouselImages.addEventListener('mouseout', startAutoplay);  
+  });
+  
+</script>  
+  
+</body>  
+</html>

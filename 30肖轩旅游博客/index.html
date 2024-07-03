@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>旅游博客</title>
+		<style>
+			/* 设置html和body的高度为100%，去掉默认的边距 */
+			body,
+			html {
+				height: 100%;
+				margin: 0;
+				font-family: Arial, sans-serif;
+				overflow: hidden;
+				/* 防止滚动条出现 */
+			}
+
+			/* 轮播容器 */
+			.slideshow-container {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				/* 确保在面板后面 */
+			}
+
+			/* 轮播幻灯片，每个幻灯片设置为全屏，背景图居中 */
+			.mySlides {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center;
+				opacity: 0;
+				/* 初始时设置为透明 */
+				transition: opacity 1s ease-in-out;
+				/* 使用过渡效果淡入淡出 */
+			}
+
+			/* 活动状态的幻灯片 */
+			.mySlides.active {
+				opacity: 1;
+				/* 显示当前活动的幻灯片 */
+			}
+
+			/* 前后按钮样式 */
+			.prev,
+			.next {
+				cursor: pointer;
+				/* 鼠标悬停时显示手型 */
+				position: absolute;
+				top: 50%;
+				/* 垂直居中 */
+				width: auto;
+				padding: 16px;
+				margin-top: -22px;
+				/* 垂直方向上的负边距，确保按钮居中 */
+				color: white;
+				/* 按钮文字颜色 */
+				font-weight: bold;
+				/* 按钮文字加粗 */
+				font-size: 18px;
+				/* 按钮文字大小 */
+				transition: 0.6s ease;
+				/* 过渡效果 */
+				border-radius: 0 3px 3px 0;
+				/* 圆角边框 */
+				user-select: none;
+				/* 禁用文本选择 */
+				z-index: 1;
+				/* 确保按钮在面板上面 */
+			}
+
+			/* 下一个按钮样式，左边圆角 */
+			.next {
+				right: 0;
+				border-radius: 8px 0 0 8px;
+			}
+
+			/* 鼠标悬停时按钮背景颜色变化 */
+
+			.prev:hover,
+			.next:hover {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+
+			/* 面板设置 */
+			.panel {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				/* 水平垂直居中 */
+				width: 80%;
+				max-width: 600px;
+				padding: 20px;
+				background: rgba(255, 255, 255, 0.2);
+				/* 半透明白色背景 */
+				backdrop-filter: blur(10px);
+				/* 高斯模糊背景 */
+				border-radius: 10px;
+				/* 圆角边框 */
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+				/* 阴影效果 */
+				text-align: center;
+				/* 文本居中 */
+			}
+
+			/* 下拉菜单样式 */
+			.dropdown {
+				position: relative;
+				display: inline-block;
+			}
+
+			/* 下拉菜单内容 */
+			.dropdown-content {
+				display: none;
+				/* 默认隐藏 */
+				position: absolute;
+				background-color: white;
+				/* 白色背景 */
+				min-width: 160px;
+				/* 最小宽度 */
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+				/* 阴影效果 */
+				z-index: 1;
+				/* 确保在其他元素上方 */
+				border-radius: 10px;
+				/* 圆角边框 */
+				padding: 10px;
+				/* 内边距 */
+				text-align: left;
+				/* 文本左对齐 */
+			}
+
+			/* 鼠标悬停或点击时显示下拉内容 */
+			.dropdown:hover .dropdown-content,
+			.dropdown:focus-within .dropdown-content {
+				display: block;
+			}
+
+			/* 下拉菜单链接样式 */
+			.dropdown-content a {
+				color: black;
+				/* 链接文字颜色 */
+				padding: 12px 16px;
+				/* 内边距 */
+				text-decoration: none;
+				/* 去掉下划线 */
+				display: block;
+				/* 块级显示 */
+			}
+
+			/* 鼠标悬停时改变链接背景颜色 */
+			.dropdown-content a:hover {
+				background-color: #ddd;
+			}
+		</style>
+	</head>
+	<body><!-- 前后按钮 -->
+		<a class="prev"> &#10094;</a>
+		<a class="next"> &#10095;</a>
+		<!-- 轮播容器 -->
+		<div class="slideshow-container">
+
+			<!-- 幻灯片图片 -->
+			<div class="mySlides" style="background-image: url('https://asunny-1314135129.cos.ap-guangzhou.myqcloud.com/img/1.jpeg');"></div>
+			<div class="mySlides" style="background-image: url('https://asunny-1314135129.cos.ap-guangzhou.myqcloud.com/img/2.jpeg');"></div>
+			<div class="mySlides" style="background-image: url('https://asunny-1314135129.cos.ap-guangzhou.myqcloud.com/img/3.jpeg');"></div>
+			<div class="mySlides" style="background-image: url('https://asunny-1314135129.cos.ap-guangzhou.myqcloud.com/img/4.jpeg');"></div>
+			<div class="mySlides" style="background-image: url('https://asunny-1314135129.cos.ap-guangzhou.myqcloud.com/img/5.jpeg');"></div>
+
+		</div>
+
+		<!-- 模糊背景面板 -->
+		<div class="panel">
+			<h1>欢迎</h1>
+			<p>这是一个梦幻之旅</p>
+			<!-- 下拉菜单 -->
+			<div class="dropdown">
+				<button>进入</button>
+				<div class="dropdown-content">
+					<a href="zc.html">注册</a>
+					<a href="#">开启</a>
+					
+				</div>
+			</div>
+		</div>
+
+		<script>	//添加元素监听器
+			document.addEventListener('DOMContentLoaded', function() {
+				// 当前幻灯片索引
+				let slideIndex = 0;
+				// 获取所有幻灯片元素		//返回class的根元素，含了所有拥有指定 class 的子元素。当在 document 对象上调用此方法时，会检索整个文档，包括根元素。
+				const slides = document.getElementsByClassName("mySlides");
+				const totalSlides = slides.length;
+
+				// 显示指定索引的幻灯片
+				function showSlides(n) {
+					// 隐藏所有、、幻灯片
+					for (let i = 0; i < totalSlides; i++) {
+						slides[i].classList.remove('active');
+					}					//移除
+					// 显示当前索引的幻灯片
+					slides[n].classList.add('active');
+				}
+
+				// 切换到下一张或上一张幻灯片
+				function plusSlides(n) {
+					slideIndex = (slideIndex + n + totalSlides) % totalSlides;
+					showSlides(slideIndex);
+				}
+
+				// 自动切换幻灯片，每3秒切换一次
+				function autoSlides() {
+					plusSlides(1);
+					setTimeout(autoSlides, 3000);
+				}
+
+				// 初始化显示第一张幻灯片并启动自动切换
+				showSlides(slideIndex);
+				autoSlides();
+				// 为前后按钮添加点击事件监听//方法返回文档中匹配指定 CSS 选择器的一个元素
+				document.querySelector('.prev').addEventListener('click', function() {
+					plusSlides(-1);
+				});
+
+				document.querySelector('.next').addEventListener('click', function() {
+					plusSlides(1);
+				});
+			})
+		</script>
+	</body>
+</html>

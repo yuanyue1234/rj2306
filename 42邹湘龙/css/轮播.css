@@ -1,0 +1,79 @@
+.wrap {
+	width:590px;
+	height: 470px;
+	position: relative;
+	margin-left: 550px;
+	top: 10px;
+}
+
+.list {
+	width: 590px;
+	height: 470px;
+	position: relative;
+	padding-left: 0px;
+}
+
+.item {
+	width: 590px;
+	height: 470px;
+	list-style: none;
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	transition: all .8s;
+}
+
+.item.active {
+	z-index: 10;
+	opacity: 1;
+}
+
+img{
+	width: 590px;
+	height: 470px;
+}
+
+.btn {
+	width: 25px;
+	height: 35px;
+	z-index: 100;
+	top: 220px;
+	position: absolute;
+	opacity: 0.2;
+}
+
+#leftBtn {
+	left: 0px;
+	border-radius: 0px 50px 50px 0px;
+}
+
+#rightBtn {
+	right: 0px;
+	border-radius: 50px 0px 0px 50px;
+}
+
+.pointList {
+	list-style: none;
+	padding-left: 0px;
+	position: absolute;
+	left: 20px;
+	bottom: 15px;
+	z-index: 200;
+}
+
+.point {
+	width: 10px;
+	height: 10px;
+	opacity: 0.6;
+	border-radius: 100%;
+	float: left;
+	margin-left: 8px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: slategray;
+	cursor: pointer;
+}
+
+.point.active {
+	background-color: white;
+}

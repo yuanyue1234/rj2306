@@ -1,0 +1,39 @@
+a {
+	float: right;
+}
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 20px;  
+}  
+  
+form {  
+    display: flex;  
+    flex-direction: column;  
+    gap: 10px;  
+}  
+  
+label {  
+    display: block;  
+    margin-bottom: 5px;  
+}  
+  
+input[type="text"],  
+input[type="email"],  
+input[type="password"] {  
+    padding: 5px;  
+    border: 1px solid #ccc;  
+    border-radius: 4px;  
+}  
+  
+button {  
+    padding: 10px 20px;  
+    background-color: #4CAF50;  
+    color: white;  
+    border: none;  
+    border-radius: 4px;  
+    cursor: pointer;  
+}  
+  
+button:hover {  
+    background-color: #45a049;  
+}

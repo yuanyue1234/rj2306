@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>京东商城</title>
+		<link rel="stylesheet" type="text/css" href="css/轮播.css" />
+		<link rel="stylesheet" type="text/css" href="css/下拉.css" />
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body>
+		<!-- 注册 -->
+		<div class="nav">
+			<ul>
+				<a href="#">
+					<span>你好，</span>
+					<span class="style-red">请登录</span>
+				</a>
+				&nbsp;&nbsp;
+				<a href="注册/注册.html">免费注册</a>
+
+				<!-- 下拉 -->
+				<select name="dropdown" id="dropdown">
+					<option value="option1">我的京东</option>
+					<option value="option2">待处理订单</option>
+					<option value="option3">我的问答</option>
+				</select>
+			</ul>
+		</div>
+		<div class="mui-input-row">
+			<p>
+				<input type="search" class="mui-input-clear" placeholder=""><button type="submit">搜索</button>
+			</p>
+			<div class="a">
+				<a href="#">京东超市</a>
+				<a href="#">京东家电</a>
+				<a href="#">电脑数码</a>
+				<a href="#">大牌奥莱</a>
+				<a href="#">京东手机</a>
+				<a href="#">拍卖</a>
+				<a href="#">京东生鲜</a>
+				<a href="#">企业会员</a>
+				<a href="#">进口好物</a>
+				<a href="#">京东五金城</a>
+			</div>
+		</div>
+		<div class="left">
+			<ul>
+				<li><a href="#">家用电器</a></li>
+				<li><a href="#">手机</a>/<a href="#">运营商</a>/<a href="#">数码</a></li>
+				<li><a href="#">电脑</a>/<a href="#">办公</a>/<a href="#">文具用品</a></li>
+				<li><a href="#">家居</a>/<a href="#">家具</a>/<a href="#">家装</a>/<a href="#">厨具</a></li>
+				<li><a href="#">男装</a>/<a href="#">女装</a>/<a href="#">童装</a>/<a href="#">内衣</a></li>
+				<li><a href="#">美妆</a>/<a href="#">个护清洁</a>/ <a href="#">宠物</a></li>
+				<li><a href="#">女鞋</a>/<a href="#">箱包</a>/<a href="#">钟表</a>/<a href="#">珠宝</a></li>
+				<li><a href="#">男鞋</a>/<a href="#">运动</a>/<a href="#">户外</a></li>
+				<li><a href="#">房产</a>/<a href="#">汽车</a>/<a href="#">汽车用品</a></li>
+				<li><a href="#">母婴</a>/<a href="#">玩具乐器</a></li>
+				<li><a href="#">食品</a>/<a href="#">酒类</a>/<a href="#">生鲜</a>/<a href="#">特产</a></li>
+				<li><a href="#">艺术</a>/<a href="#">礼品鲜花</a>/<a href="#">农牧园艺</a></li>
+				<li><a href="#">京东买药</a>/<a href="#">计生情趣</a></li>
+				<li><a href="#">图书</a>/<a href="#">文娱</a>/<a href="#">教育</a>/<a href="#">电子书</a></li>
+				<li><a href="#">机票</a>/<a href="#">酒店</a>/<a href="#">旅游</a>/<a href="#">生活</a></li>
+				<li><a href="#">支付</a>/<a href="#">白条</a>/<a href="#">保险</a>/<a href="#">企业金融</a></li>
+				<li><a href="#">安装</a>/<a href="#">维修</a>/<a href="#">清洗</a>/<a href="#">二手</a></li>
+				<li><a href="#">元器件</a>/<a href="#">原材料</a>/<a href="#">五金机电</a></li>
+			</ul>
+		</div>
+		<!-- 轮播 -->
+		<div class="wrap">
+			<ul class="list">
+				<li class="item active"><a href="#"><img src="img/1.PNG"></a></li>
+				<li class="item"><a href="#"><img src="img/2.PNG"></a></li>
+				<li class="item"><a href="#"><img src="img/3.PNG"></a></li>
+				<li class="item"><a href="#"><img src="img/4.PNG"></a></li>
+				<li class="item"><a href="#"><img src="img/5.PNG"></a></li>
+				<li class="item"><a href="#"><img src="img/6.PNG"></a></li>
+			</ul>
+			<ul class="pointList">
+				<li class="point active" data-index=0></li>
+				<li class="point" data-index=1></li>
+				<li class="point" data-index=2></li>
+				<li class="point" data-index=3></li>
+				<li class="point" data-index=4></li>
+			</ul>
+			<button class="btn" id="leftBtn">
+				&lt;
+			</button>
+			<button class="btn" id="rightBtn">
+				&gt;
+			</button>
+		</div>
+		<div class="right">
+			<div class="logo-info">
+				<a href="注册/注册.html"><img src="img/京东.png" alt="京东" /></a>
+				<a href="注册/注册.html" class="huanyin">Hi~欢迎逛京东！</a>
+			</div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
+		<script src="js/下拉.js"></script>
+		<script src="js/轮播.js"></script>
+	</body>
+</html>

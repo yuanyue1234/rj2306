@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Cyberpunk';
+  src: url('4.ttf') format('truetype');
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 导航栏样式 */
+nav {
+  background-color: #f8fc0b;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 300px;
+  height: 100%;
+  margin-left: 30px;
+}
+
+nav div {
+  position: relative;
+}
+
+nav div button {
+  padding: 15px;
+  width: 150px;
+  background-color: #f8fc0b;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  color: #00bfff;
+  font-size: 1.3em;
+  font-family: 'Cyberpunk';
+}
+
+nav div ul {
+  display: none;
+  position: absolute;
+  background-color: #fbee0d;
+  min-width: 200px;  
+  min-height: 150px;  
+  box-shadow: 0px 8px 16px 0px rgba(74, 190, 239, 1.0);
+  z-index: 1;
+  top: 100%;
+  margin-top: 0;
+  list-style-type: none;
+  padding-left: 0;
+  opacity: 0;  
+  transition: opacity 1.5s ease;  
+}
+
+nav div:hover ul {
+  display: block;
+  opacity: 1;  
+}
+
+nav div ul li {
+  font-family: "楷体";
+  color: lightblue;
+  font-weight: bold;
+  padding: 15px 0;  
+  width: 100%;  
+}
+
+nav div ul li:hover {
+  background-color: rgba(255, 255, 255, 0.5);  
+  transform: scale(1.1);  
+  transition: all 0.5s ease;  
+}
+
+/* 轮播图样式 */
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+  opacity: 1;
+}
+
+/* 注册表样式 */
+form {
+  width: 200px;
+  padding: 50px;
+  border: 2.5px solid #fff;
+  border-radius: 8px;
+  background-color: #f8fc0b;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #d8efef;
+  border-radius: 20px;
+}
+
+form input[type="submit"] {
+  background-color: #00BFFF;
+  Color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #ddfdff;
+}

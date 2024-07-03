@@ -1,0 +1,128 @@
+
+	
+*{
+	margin: 0;
+}
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	border: black;
+	text-align: center;
+	background-color: aqua;
+}
+.main{
+	width: 100%;
+	height: 800px;
+}
+.content{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav{
+	max-width:400px;
+	
+}
+.nav h3{
+	width: 100%;
+	height: 80px;
+	
+	text-align: center;
+	line-height: 80px;
+	color: #f4f4f4;
+	font-size: 15px;
+}
+.itml{
+	line-height: 30px;
+	text-align: center;
+	font-size: 13px;
+	margin: 10px;
+}
+.itml input{
+	width: 200px;
+	
+	font-size: 15px;
+}
+.nav .itml button{
+	color: black;
+	border: none;
+	font-size: 13px;
+	cursor: pointer;
+	
+}
+/* 轮播图 */
+.head{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px;
+}
+.carousel {
+    position: relative;
+    width: 500px;
+	
+    overflow: hidden;
+    /* border-radius: 8px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-images img {
+    width: 100%;
+	height: 300px;
+    display: none;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+.carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.head .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+/* 下拉 */
+.j {
+  position: relative; /* 相对于其正常位置定位 */
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+}
+
+#choss {
+  width: 200px; /* 选择框宽度 */
+  padding: 10px; /* 内边距 */
+  font-size: 16px; /* 字体大小 */
+  border: 1px solid #ccc; /* 边框样式 */
+  border-radius: 5px; /* 边框圆角 */ 
+ cursor: pointer;
+  }
+
+
+#choss:focus {
+
+  border-color: #666; /* 聚焦时边框颜色 */
+}
+

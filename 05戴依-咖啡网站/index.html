@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css">
+		
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="header">
+				<div class="logo"><a href="#"><img class=pic src="images/logo.png"></a></div>
+				<div class="nav">
+					<ul>
+						<li><a href="shouye.html">首页</a>
+		
+						</li>
+						<li><a href="kafei.html">咖啡及文化</a></li>
+		
+						<li><a href="meishi.html">美食与饮品</a></li>
+						<li><a href="xinwen.html">美食新闻</a></li>
+						<li><a href="zhuce.html">注册</a></li>
+						<!-- （下拉选择框）onchange 事件表示当选择框的值发生改变时会执行后面的JS代码 -->
+						<select onchange="if (this.value) window.location.href=this.value">
+							  <!--   用于检查所选的值是否存在，如果存在则执行 即将页面重定向到所选值所对应的链接。 -->
+							<option value="1">配方</option>
+							<option value="https://baike.baidu.com/item/%E6%9F%A0%E6%AA%AC%E8%8C%B6/6025749?fr=ge_ala">
+								茶</option>
+							<option value="https://haokan.baidu.com/v?pd=wisenatural&vid=16651656177310058553">蛋糕
+							</option>
+							<option value="https://haokan.baidu.com/v?pd=wisenatural&vid=9751820214937290570">咖啡
+							</option>
+						</select>
+					</ul>
+				</div>
+			</div>
+		<div id="banner">
+			<ul id="imglist">
+				<li>
+					<img src="images/01.jpg" alt="">
+				</li>
+				<li>
+					<img src="images/02.jpg" alt="">
+				</li>
+				<li>
+					<img src="images/03.jpg" alt="">
+				</li>
+				<li>
+					<img src="images/04.jpg" alt="">
+				</li>
+				<li>
+				<img src="images/01.jpg" alt="">
+				</li><!-- 添加一张图并在imglist里修改图片的宽，使其连续无空白 -->
+			</ul>
+			<!-- 用列表做出四个小圆点 -->
+			<ul id="icolist">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<!-- 做出两个div当做按钮，先暂时把隐藏取消 -->
+			<div class="prev">《</div>
+			<div class="next">》</div>
+		</div>
+		<!-- 创建一个移动变量left、一个定时器timer -->
+		<script src="js/shouye.js">
+			// 获取这两个元素
+		
+		</script>
+	</body>
+</html>

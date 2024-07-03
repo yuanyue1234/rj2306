@@ -1,0 +1,251 @@
+.head{
+	display: flex;  
+	    align-items: center;  
+	    height: 50px;  
+	    background-color: bisque;
+}
+//下拉菜单
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropbtn{
+	/* 设置按钮的宽度和高度 */
+	width: 100px;    
+	height: 50px;    
+	  
+	/* 设置按钮的背景色、文字颜色和边框 */    
+	background-color: #4CAF50; /* 绿色 */    
+	border: none;    
+	color: white;    
+	text-align: center;    
+	text-decoration: none;    
+	display: inline-block;    
+	font-size: 16px;    
+	margin: 4px 2px;    
+	cursor: pointer; 
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #55aaff;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+.show {
+	display: block;
+}
+
+.login-link,  
+.register-link {  
+    /* 设置按钮的宽度和高度 */    
+    width: 100px;    
+    height: 50px;    
+      
+    /* 设置按钮的背景色、文字颜色和边框 */    
+    background-color: #4CAF50; /* 绿色 */    
+    border: none;    
+    color: white;    
+    text-align: center;    
+    text-decoration: none;    
+    display: inline-block;    
+    font-size: 16px;    
+    margin: 4px 2px;    
+    cursor: pointer;    
+}  
+  
+.login-link:active,  
+.register-link:active {  
+    background-color: #45a049; /* 点击时也是更深的绿色 */    
+    box-shadow: 0 5px #666;    
+    transform: translateY(4px);  
+}
+.login-container {  
+    display: flex;  
+    margin-left: auto; /* 将容器推送到右侧 */  
+}  
+.login-container a{
+	line-height: 50px;
+}
+/*轮播图*/
+.carousel-container {  
+  position: relative;  
+  width: 100%; /* 根据需要设置 */   
+  margin: 0 auto; /* 水平居中 */  
+  overflow: hidden; /* 隐藏超出容器的部分 */  
+}  
+.carousel-slide img {  
+  width: 100%; /* 图片宽度等于幻灯片宽度 */  
+  height: auto; /* 图片高度自动调整以保持比例 */   
+  display: block; /* 消除图片底部的默认空间 */  
+}  
+.carousel-slides {  
+  display: flex;  
+  transition: transform 0.5s ease-in-out;  
+} 
+.carousel-slide {  
+  flex-shrink: 0; /* 防止幻灯片在容器缩小时变形 */  
+  width: 100%;  
+  overflow: hidden; /* 隐藏超出幻灯片的内容 */  
+}  
+.carousel-prev,  
+.carousel-next {  
+  position: absolute;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  background-color: rgba(0, 0, 0, 0.5);  
+  color: white;  
+  border: none;  
+  padding: 10px;  
+  cursor: pointer;  
+  border-radius: 50%;  
+  z-index: 1; /* 确保按钮在幻灯片之上 */  
+}  
+  
+.carousel-prev {  
+  left: 10px;  
+}  
+  
+.carousel-next {  
+  right: 10px;  
+}  
+  
+/* 指示器样式（可选） */  
+.carousel-indicators {  
+  position: absolute;  
+  bottom: 10px;  
+  left: 50%;  
+  transform: translateX(-50%);  
+  display: flex;  
+  justify-content: space-between;  
+  padding: 0;  
+  margin: 0;  
+  list-style: none;  
+}  
+  
+.carousel-indicators li {  
+  width: 10px;  
+  height: 10px;  
+  background-color: #ccc;  
+  border-radius: 50%;  
+  cursor: pointer;  
+}  
+  
+.carousel-indicators li.active {  
+  background-color: #333;  
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.content .content-l {
+  width: 910px;
+}
+.content .content-l .card {
+  margin-bottom: 15px;
+}
+.content .content-r {
+  width: 325px;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////
+body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    color: #ffff7f;  
+}  
+
+/* 卡片样式 */  
+.card-left{  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+    background-color: #ff3a4e;  
+	width: 450px;
+	float: left;
+}  
+
+.card-right{
+	border: 1px solid #ccc;
+	border-radius: 5px;  
+	background-color: #ff3a4e;  
+	width: 450px;
+	float: right;
+}
+.card-img {  
+    width: 450px; /* 图片宽度占满列宽 */  
+    height: auto; /* 图片高度自动 */  
+}  
+  
+.card-title {  
+    font-size: 18px;  
+    margin-bottom: 5px;  
+}  
+  
+.card-text {  
+    font-size: 16px;  
+}  
+/* .card2{
+	width: 200px;
+	height: 50px;
+} */
+.col-2 d-flex align-items-center{
+	align-items: center;
+}
+.card-body p-2{
+	
+}
+.content-r {
+      /* 如果需要，可以添加一些样式来控制布局 */  
+	margin-right: auto;
+  }  
+/* 底部信息 */  
+.footer {  
+    background-color: #f5f5f5;  
+    padding: 20px;  
+    text-align: center;  
+    margin-top: 20px;  
+}  
+  
+.footer a {  
+    color: #007BFF;  
+    text-decoration: none;  
+    margin: 0 5px;  
+}  
+  
+.footer a:hover {  
+    text-decoration: underline;  
+}  
+  
+/* 标题样式 */  
+h4 {  
+    margin-top: 20px;  
+    font-size: 18px;  
+}  
+  
+
+
+  
+/* 响应式布局（可选） */  
+@media (max-width: 767px) {  
+    /* 在小屏幕上，可能需要调整列的大小或者堆叠卡片 */  
+    .col-2, .col-10 {  
+        flex-basis: 100%; /* 堆叠卡片和图标 */  
+    }  
+    .card-img {  
+        margin-bottom: 10px; /* 添加一些垂直间距 */  
+    }  
+}

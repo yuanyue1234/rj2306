@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<title>猫</title>
+		<link rel="stylesheet" href="11.css" />
+	</head>
+	<body>
+		<nav>
+			<ul id="menu">
+				<li><a href="#">首页</a></li>
+				<li>
+					<a href="#" id="fl">分类</a>
+					<ul>
+						<li><a href="#">小猫</a></li>
+						<li><a href="#">中猫</a></li>
+						<li><a href="#">大猫</a></li>
+					</ul>
+				</li>
+				<li><a href="#">关于猫</a></li>
+				<li><a href="#">联系猫</a></li>
+			</ul>
+		</nav>
+
+		<div class="content-container">
+			<div class="carousel">
+				<div class="slides">
+					<div class="slide"><img src="abe1eea3ca79fc28-c577ebdcb0f3dbcc-0dff8d7a9838df44c4a2741eefb18854.jpg"
+							alt="Slide 1"></div>
+					<div class="slide"><img src="e154002750821088-bcd6ba3248bd59b3-3fe28984bd2c8e9f80b5197d00f6b27a.jpg"
+							alt="Slide 2"></div>
+					<div class="slide"><img src="eeb88387bfc51b95-0208b2ba6b7ef312-58a3b4d0f0c8a2a058b644feba9648a5.jpg"
+							alt="Slide 3"></div>
+				</div>
+				<a class="prev" onclick="moveSlide(-1)">❮</a>
+				<a class="next" onclick="moveSlide(1)">❯</a>
+			</div>
+			<!-- 注册表单 -->
+			<div class="registration-form-container">
+
+				<div class="container">
+					<h4>注册</h4>
+					<form id="registrationForm" onsubmit="return validateForm()">
+						<label for="username">用户名:</label>
+						<input type="text" id="username" name="username" required>
+
+						<label for="email">邮箱:</label>
+						<input type="email" id="email" name="email" required>
+
+						<label for="password">密码:</label>
+						<input type="password" id="password" name="password" required>
+
+						<label for="confirm_password">确认密码:</label>
+						<input type="password" id="confirm_password" name="confirm_password" required>
+
+						<input type="submit" value="注册">
+
+				</div>
+
+				<!-- 注册表单内容 -->
+				</form>
+			</div>
+		</div>
+		<script src="11.js"></script>
+	</body>
+</html>

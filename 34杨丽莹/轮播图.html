@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单轮播图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wp{
+            width: 250px;
+            height: 400px;
+            margin: 40px auto 0;
+            position: relative;
+            overflow: hidden;
+        }
+        #list{
+            display: flex;
+            width: 1000px;
+            transform: translateX(0);
+            /* 添加过渡动画 */
+            transition: all 1s;
+        }
+        .wp div img{
+            width: 250px;
+            height: 400px;
+        }
+        #box {
+            height: 40px;
+            width: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            left: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box span {
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 100%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        #box span:hover{
+            background: pink;
+            box-shadow: 0 0 0 2px #ccc;
+        }
+        #r{
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 170px;
+            right: 0;
+            background: url(./images/右箭头.png)no-repeat 0 0/100% 100%;
+        }
+        #l{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 170px;
+            left: 0;
+            background: url(./images/左箭头\ \(1\).png)no-repeat 0 0/100% 100%;
+        }
+		
+    </style>
+	
+</head>
+
+<body>
+    <!-- 外层的div，包含图片列表 -->
+    <div class="wp">
+        <div id="list">
+            <img src="34yly/img/p1.webp" alt="">
+            <img src="34yly/img/p2.webp"alt="">
+            <img src="34yly/img/p3.webp" alt="">
+        </div>
+        <!-- 分页器 -->
+        <div id="box">
+             <span></span>
+             <span></span>
+             <span></span>
+            
+        </div>
+        <div id="r"></div>
+        <div id="l"></div>
+    </div>
+</body>
+</html>
+<script>
+    // 获取需要点击的分页器
+    let box = document.getElementById('box');
+    let spanBox = box.getElementsByTagName('span');
+    // 获取列表元素
+    let list = document.getElementById('list');
+ 
+    // 点击分页器
+    spanBox[0].onclick = function () {
+        list.style.transform='translateX(0px)'
+    };
+    spanBox[1].onclick = function () {
+        list.style.transform='translateX(-250px)'
+        console.log('点击了第二个图片');
+    };
+    spanBox[2].onclick = function () {
+        list.style.transform='translateX(-500px)'
+    };
+    spanBox[3].onclick = function () {
+        list.style.transform='translateX(-750px)'
+    };
+    
+    let n = 0;
+    let r = document.getElementById('r');
+    let l = document.getElementById('l');
+    r.onclick = function (){
+        n<3? n++ :n;
+        console.log(n);
+        list.style.transform='translateX(-'+n*250+'px)'
+    };
+    l.onclick = function (){
+        n>0? n-- :n=0;
+        console.log(n);
+        list.style.transform='translateX(-'+n*250+'px)'
+    };
+	
+</script>

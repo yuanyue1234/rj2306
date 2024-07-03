@@ -1,0 +1,25 @@
+// 注册表单验证逻辑									监听器
+document.getElementById('registrationForm').addEventListener('submit', function(event){
+    event.preventDefault();//阻止元素提交表单
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+	const email = document.getElementById('email').value;
+
+    // 正则表达式验证 +是量词 它表示前面的元素至少出现一次
+    if(!/^[\u4e00-\u9fa5]{8,}$/.test(username)){
+        alert('用户名只能包含中文，且要8位');
+        return; // 终止函数的执行
+    }
+	 if(!/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(email)){
+	        alert('邮箱格式不正确');
+	        return; // 终止函数的执行
+	    }
+	//											文本	
+	//检查一个字符串是否与正则表达式中的模式相匹配   $用作锚点，表示输入字符串的末尾
+    if(!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/.test(password)){
+        alert('密码必须包含至少6位字母和数字');
+        return; // 终止函数的执行
+    }
+    alert('注册成功!');
+	// 清空用户名和密码输入框
+});

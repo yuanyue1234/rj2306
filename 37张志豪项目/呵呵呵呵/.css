@@ -1,0 +1,38 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+a {
+text-decoration: none;
+color: #000;
+}
+
+ul {
+list-style: none;
+}
+
+.nav {
+text-align: center;
+overflow: hidden;
+}
+
+.nav>li {
+float: left;
+}
+
+.nav>li>a {
+border: 1px solid rgb(199, 186, 6);
+display: block;
+width: 130px;
+}
+
+.nav ul {
+background-color: rgb(199, 186, 6);
+line-height: 30px;
+display: none;
+}
+
+.nav ul>li:hover {
+background-color: yellow;
+}

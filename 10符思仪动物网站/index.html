@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>完整网页项目示例</title>
+	</head>
+	<body>
+		<header>
+			<link rel="stylesheet" href="css/new_file.css">
+			<div id="nav">
+				<div class="dropdown">
+				    <button class="dropbtn" aria-controls="dropdown-home">首页 <i class="fa fa-caret-down"></i></button>
+				    <div class="dropdown-content" id="dropdown-home">
+						<a href="#">首页类型</a>
+						<a href="#">首页类别</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn" onclick="toggleDropdown('dropdown-animals')">个人中心 <i
+							class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content" id="dropdown-animals">
+						<a href="#">类型</a>
+						<a href="#">类别</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn" onclick="toggleDropdown('dropdown-home')">动物<i
+							class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content" id="dropdown-home">
+						<a href="#">动物类型</a>
+						<a href="#">动物类别</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn" onclick="toggleDropdown('dropdown-animals')">猫<i
+							class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content" id="dropdown-animals">
+						<a href="#">猫类型</a>
+						<a href="#">猫类别</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropbtn" onclick="toggleDropdown('dropdown-skincare')">松鼠<i
+							class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content" id="dropdown-skincare">
+						<a href="#">松鼠类型</a>
+						<a href="#">松鼠类别</a>
+					</div>
+				</div>
+
+				<div class="dropdown">
+					<button class="dropbtn" onclick="toggleDropdown('dropdown-electronics')">食物<i
+							class="fa fa-caret-down"></i></button>
+					<div class="dropdown-content" id="dropdown-electronics">
+						<a href="#">猫粮</a>
+						<a href="#">狗粮</a>
+
+					</div>
+				</div>
+		</header>
+		<div class="slideshow-container" id="home">		
+		    <div class="slide active"><img src="img/OIP-C.jpg" alt="img/OIP-C.jpg"></div>
+			<div class="slide"><img src="img/R-C.jpg" alt="img/R-C.jpg"></div>
+			<div class="slide"><img src="img/OIP-C (2) - 副本.jpg" alt="img/OIP-C (2) - 副本.jpg"></div>
+
+		</div>
+            
+		<!-- 注册表单 -->
+		<section id="register">
+			<h2>注册表单</h2>
+			<form id="registrationForm" onsubmit="return validateRegistration()">
+				<input type="text" id="username" name="username" placeholder="用户名" required>
+				<input type="email" id="email" name="email" placeholder="邮箱" required>
+				<input type="password" id="password" name="password" placeholder="密码" required>
+				<button type="submit">注册</button>
+			</form>
+		</section>
+		<footer>
+			<p>&copy; 2024 我的网站</p>
+		</footer>
+		<script src="new_file.js"></script>
+	</body>
+</html>

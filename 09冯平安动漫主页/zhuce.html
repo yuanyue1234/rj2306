@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header class="clearfix"> <a href="index.html" class="logo">妖精的尾巴</a>
+		  <ul class="nav">
+		    <li><a href="index.html">首页</a></li>
+		    <li><a href="#">人物介绍</a></li>  
+ <select onchange="if (this.value) window.location.href=this.value">
+    <option value="">请选择</option>
+    <option value="https://www.sohu.com/a/124522693_480098">露西</option>
+    <option value="https://www.sohu.com/a/124359695_480098">纳兹</option>
+    <option value="https://baike.so.com/doc/5351788-5587246.html">哈比</option>
+  </select>
+
+			  <li><a href="zhuce.html">注册</a></li>
+			    </ul>
+			  </header>
+ <h2>注册</h2>
+  <form>
+    <label for="username">用户名：</label><br><!-- 与for元素搭配使用 -->
+    <input type="text" id="username"><br><!-- 用于普通文本输入。 -->
+    <label for="password">密码：</label><br>
+    <input type="password" id="password"><br><!-- 用于隐藏输入的文本，通常用于输入密码。 -->
+    <label for="confirmPassword">确认密码：</label><br>
+    <input type="password" id="confirmPassword"><br>
+	<!-- `confirmPassword` 通常用于密码确认的场景，特别是在用户注册或更改密码的过程中。它是一个字段，用于用户再次输入他们的密码以验证他们之前输入的密码是否一致。 -->
+    <label for="email">电子邮件：</label><br>
+    <input type="email" id="email"><br><!-- 用于输入电子邮件地址，浏览器会提供自动格式化和验证 -->
+    <button type="button" onclick="register()">注册</button><!-- 点击按钮 -->
+	<!-- “register”常见的释义为“注册”“登记”“记录”等。 -->
+  </form>
+<script src="js/zhuce.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

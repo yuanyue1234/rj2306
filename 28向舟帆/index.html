@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="head">
+				<div class="carousel"><!-- 旋转式幻灯放映机 -->
+					    <div class="carousel-images">
+					        <img src="img/t0173d41a4d5abcd862.jpg" alt="" class="active">
+					        <img src="img/t013677cbd577140f80.jpg" alt="">
+					        <img src="img/t01b4f6e611b5a4635e.png" alt="">
+					    </div>		<!-- 上一个 -->	<!-- 事件属性 --> 
+					    <button class="prev" onclick="prevSlide()">&#10094;</button>
+					    <button class="next" onclick="nextSlide()">&#10095;</button>
+					</div>			<!-- 下一个 -->	<!-- 自定义函数 --> <!-- onclick事件处理器 -->
+			
+				</div>
+				<div class="content">
+				<div class="nav" >
+					<h3>用户注册</h3>
+					<!-- 表单元素 -->
+					 <form id="registrationForm" >
+					<div class="itml">
+						<label for="username">用户:</label>
+						<input type="text" name="username" id="username">
+					</div>
+					<div class="itml">
+					<label for="email">邮箱:</label>
+					<input type="email"  name="email" id="email">
+					</div>
+					<div class="itml">
+						<label for="password">密码:</label>
+						<input type="password" name="password" id="password">
+					</div>
+					<div class="itml">
+						<button type="submit" onclick="register()">注册</button>
+					</div>
+					  </form>
+			</div>
+			</div>
+			<div class="foot">
+			<div class="j">
+			  <select id="choss" onchange="handleOptionChange()">
+			    <option value="">看见客户</option>
+			    <option value="1">忘地方</option>
+			    <option value="2">的地方</option>
+			    <option value="3">发短信</option>
+			  </select>
+			</div>
+					</div>
+				</div>
+			</div>
+		<script src="script.js"></script>
+		<script src="zhuce.js"></script>
+		<script src="xiala.js"></script>
+		<script src="youdiandx.js"></script>
+	</body>
+</html>

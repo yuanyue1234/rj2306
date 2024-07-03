@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="main">
+			<div class="head">
+				<div class="carousel"><!-- 旋转式幻灯放映机 -->
+					    <div class="carousel-images">
+					        <img src="img/u=281598415,2392217866&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="" class="active">
+					        <img src="img/u=494818856,1919270557&fm=253&fmt=auto&app=120&f=JPEG.webp" alt="">
+					         <img src="img/u=792942531,3683176324&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="">
+							<img src="img/u=3204257478,3781854542&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="">
+					    </div>		<!-- 上一个 -->	<!-- 事件属性 --> 
+					    <button class="prev" onclick="prevSlide()">&#10094;</button>
+					    <button class="next" onclick="nextSlide()">&#10095;</button>
+					</div>			<!-- 下一个 -->	<!-- 自定义函数 --> <!-- onclick事件处理器 -->
+			
+				</div>
+				<div class="content">
+				<div class="nav" >
+					<h3>用户注册</h3>
+					<!-- 表单元素 -->
+					 <form id="registrationForm" >
+					<div class="itml">
+						<label for="username">用户:</label>
+						<input type="text" name="username" id="username" placeholder="5~20位英文大小写">
+					</div>
+					<div class="itml">
+						<label for="password">密码:</label>
+						<input type="password" name="password" id="password">
+					</div>
+					<div class="itml">
+						<button type="submit" onclick="register()">注册</button>
+					</div>
+					  </form>
+			</div>
+			</div>
+			<div class="foot">
+			<div class="j">
+			  <select id="choss" onchange="handleOptionChange()">
+			    <option value="">dxcx</option>
+			    <option value="1">sdds</option>
+			    <option value="2">dsaf</option>
+			    <option value="3">dsff</option>
+			  </select>
+				</div>
+			</div>
+					</div>
+				</div>
+			</div>
+		<script src="script.js"></script>
+		<script src="zhuce.js"></script>
+		<script src="xiala.js"></script>
+		<script src="youdiandx.js"></script>
+	</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>购物平台</title>
+	<link rel="stylesheet" href="styles.css">
+    <style>
+        body, h1, h2, h3, p { margin: 0; padding: 0; }
+        /* 导航栏样式 */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* 注册表单样式 */
+        .register-form {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        /* 轮播图样式 */
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .carousel img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+	
+        <div class="dropdown">
+			<select>
+				<option>sdfj</option>
+				<option>jksdf</option>
+			</select>
+            </div>
+        </div>
+
+    <div class="content">
+    <div class="nav" >
+    	<h3>用户注册</h3>
+    	<!-- 表单元素 -->
+    	 <form id="registrationForm" >
+    	<div class="itml">
+    		<label for="username">用户:</label>
+    		<input type="text" name="username" id="username">
+    	</div>
+    	<div class="itml">
+    	<label for="email">邮箱:</label>
+    	<input type="email"  name="email" id="email">
+    	</div>
+    	<div class="itml">
+    		<label for="password">密码:</label>
+    		<input type="password" name="password" id="password">
+    	</div>
+    	<div class="itml">
+    		<button type="submit" onclick="register()">注册</button>
+    	</div>
+    	  </form>
+<div class="head">
+   <div class="carousel"><!-- 旋转式幻灯放映机 -->
+   	    <div class="carousel-images">
+   	        <img src="img/OIP-C.jpg" alt="" class="active">
+   	        <img src="img/OIP-C (1).jpg" alt="">
+   	        <img src="img/OIP-C (2).jpg" alt="">
+   	    </div>		<!-- 上一个 -->	<!-- 事件属性 --> 
+   	    <button class="prev" onclick="prevSlide()">&#10094;</button>
+   	    <button class="next" onclick="nextSlide()">&#10095;</button>
+   	</div>			
+   			
+   </div>
+</div>
+<script>
+	document.getElementById('registrationForm').addEventListener('submit', function(event){
+	    event.preventDefault();//阻止元素提交表单
+	    const username = document.getElementById('username').value;
+	    const password = document.getElementById('password').value;
+		const email = document.getElementById('email').value;
+	
+	    // 正则表达式验证 +是量词 它表示前面的元素至少出现一次
+	    if(!/^[\u4e00-\u9fa5]{4,}$/.test(username)){
+	        alert('用户名只能包含中文，且要四位');
+	        return; // 终止函数的执行
+	    }
+		 if(!/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(email)){
+		        alert('邮箱格式不正确');
+		        return; // 终止函数的执行
+		    }
+		//											文本	
+		//检查一个字符串是否与正则表达式中的模式相匹配   $用作锚点，表示输入字符串的末尾
+	    if(!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$/.test(password)){
+	        alert('密码必须包含至少4位字母和数字');
+	        return; // 终止函数的执行
+	    }
+	    alert('注册成功!');
+		// 清空用户名和密码输入框
+		setTimeout(function() {
+		  window.location.href = 'new.html';
+		}, 1000);
+		document.getElementById('username').value = '';
+		document.getElementById('password').value = '';
+		 document.getElementById('email').value = '';
+	});
+</script>
+<script src="script.js"></script>
+<script src="new_file.js"></script>
+</body>
+</html>

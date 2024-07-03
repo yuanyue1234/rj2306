@@ -1,0 +1,27 @@
+.carousel {  
+  position: relative;  
+  max-width: 900px;  
+  margin-bottom: 20px;
+  overflow: hidden;  
+}  
+.carousel .slide {  
+  width: 100%;  
+  height: auto;  
+  display: none;
+}  
+  
+
+.carousel .slide.active {  
+  display: block;  
+}  
+.carousel .prev,  
+.carousel .next {  
+  position: absolute;  
+  top: 50%;  
+  transform: translateY(-50%);  
+}  
+  
+.container {  
+  max-width: 100%;  
+  margin-top: 20px;   
+}    

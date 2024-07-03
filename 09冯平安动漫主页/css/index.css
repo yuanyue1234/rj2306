@@ -1,0 +1,67 @@
+/*通用类*/
+/* 设置所有元素的外边距和内边距为 0 */
+* {
+	margin: 0;
+	padding: 0;
+}
+/* 链接元素的样式:鼠标指针为指针样式，无下划线，去除轮廓 */
+a {
+	cursor: pointer;
+	text-decoration: none;
+	outline: none;
+}
+/*清除浮动:用于清除父元素内子元素的浮动，防止父元素高度塌陷*/
+.clearfix::after {
+	content: "";
+	/* 用于定义元素之前或之后放置的生成内容表示插入的内容为空 */
+	display: block;
+	clear: both;
+}
+/*wrapin 主体容器宽度*/
+/*设置.wrapin 类的元素宽度为 1000 像素，左右外边距自动*/
+.wrapin {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*header 开始*/
+/*header 元素的样式背景颜色为 #cf2212，行高 60 像素，左右内边距 15 像素*/
+header {
+	background: #cf2212;
+	line-height: 60px;
+	padding: 0 15px;
+}
+/*header 内的.logo 元素的样式向左浮动，字体大小 24 像素，颜色为白色，字体加粗，行高 60 像素*/
+header .logo {
+	float: left;
+	font-size: 24px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 60px;
+}
+/*header 内的.nav 元素的样式向右浮动*/
+header .nav {
+	float: right;
+}
+/*header 内的.nav 元素下的 li 元素的样式宽度 120 像素，文本居中，字体大小 16 像素，内联块级元素*/
+header .nav li {
+	width: 120px;
+	text-align: center;
+	font-size: 16px;
+	display: inline-block;
+}
+/*header 内的.nav 元素下的 li 元素内的链接的样式文本颜色为白色*/
+header .nav li a {
+	color: #fff;
+}
+/*banner 元素的样式显示为块级元素*/
+.banner {
+	display: block;
+}
+/*banner 元素内的图片的样式显示为块级元素，宽度 100%*/
+.banner img {
+	display: block;
+	width: 100%;
+}
+

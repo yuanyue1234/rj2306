@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桂林旅游网站</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+	body, html {
+	    margin: 0;
+	    padding: 0;
+	    font-family: Arial, sans-serif;
+		}
+	
+	header {
+	    background: #333;
+	    color: #fff;
+	    padding: 10px 0;
+	}
+	footer {
+	    position: fixed;
+	    width: 100%;
+	    bottom: 0;
+	    left: 0;
+	}
+	.menu {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    display: flex;
+	    justify-content: space-around;
+	}
+	
+	.menu li {
+	    position: relative;
+	}
+	
+	.menu a {
+	    color: #fff;
+	    text-decoration: none;
+	    padding: 10px;
+	    display: block;
+	}
+	
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: #0e0600;
+	    min-width: 160px;
+	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	    z-index: 1;
+	}
+	
+	.dropdown:hover .dropdown-content {
+	    display: block;
+	}
+	
+	.container {
+	    max-width: 1200px;
+	    margin: auto;
+	    padding: 20px;
+	}
+	
+	#carousel {
+	    width: 100%;
+	    margin-bottom: 20px;
+	    /* 轮播图样式 */
+	}
+	
+	#registration {
+	    background: #f4f4f4;
+	    padding: 20px;
+	    border-radius: 5px;
+	}
+	
+	#registration form {
+	    display: flex;
+	    flex-direction: column;
+	}
+	
+	#registration label {
+	    margin-top: 10px;
+	}
+	
+	#registration input[type="text"],
+	#registration input[type="password "] {
+	    padding: 10px;
+	    margin-top: 5px;
+	    border: 1px solid #ddd;
+	    border-radius: 5px;
+	}
+	
+	#registration inpv ut[type="submit"] {
+	    margin-top: 15px;
+	    padding: 10px;
+	    border: none;
+	    border-radius: 5px;
+	    background: #5cb85c;
+	    color: white;
+	    cursor: pointer;
+	}
+	.overall{
+	        /* 设置窗口大小 */
+	        width: 1200px;
+	        height: 600px;
+	
+	        /* 将弹性 <div> 元素的所有项目的居中对齐 */
+	        align-items: center;
+	
+	        /* 设置图片外边距 左右居中 上方5% */
+	        margin: 5% auto;        
+	    }
+	
+	    .content{
+	        /* 设置相对定位 */
+	  
+	        height: 500px;
+	    }
+	
+	    .content ul{
+	        /* 去除标签<ul><li></li></ul>默认加的样式 */
+	        list-style-type: none;
+	    }
+	
+	    .content ul>li{
+	        width: 1000px;
+	        height: 300px;
+	
+	        /* 设置绝对定位 */
+	        position: absolute;
+	
+	        /* 设置过度效果 时间为1s */
+	        transition: 1s;
+	
+	        /* 设置最大透明度 默认一开始图片为透明的 当下面js加载的时候
+	            第一张图片设置为不透明
+	        */
+	        opacity: 0;
+	    }
+	    
+	    /* 设置每个图片的样式 */
+	    .content ul>li img{    
+	        /* 设置每一张图片的大小 */
+	        width: 1200px;
+	        height: 500px;
+	
+	        /* 设置圆角边框 */
+	        border-radius: 5%;
+	     
+	        /* 设置边框样式 */
+	        border: 5px solid #0e0600;        
+	    }
+	
+	    /* 设置轮播图下面的小点 */
+	    .content ol{
+	        /* 设置相对定位 */
+	        position: relative;
+	
+	        /* 设置网格布局 */
+	        display: grid;
+	        
+	        /* 设置网格布局中的列数及宽度 */
+	        grid-template-columns: repeat(3, 75px);
+	
+	        /* 设置网格布局中的行数及宽度 */
+	        grid-template-rows: auto;
+	
+	        /* 设置网格行与列之间的间隙 */
+	        /* 间隙为1em */
+	        grid-gap: 1em;
+	        gap:1em;
+	
+	        /* 右浮动 */
+	        float: right;
+	
+	        /* 设置浮点的向上的内边距 */
+	        margin-top: 450px;
+	
+	        /* 去除列表样式 */
+	        list-style: none;
+	
+	        /* 把图像的上边缘设置在其包含元素上边缘之下0px高的位置 */
+	        top: 0;
+	
+	        /* 把图像的左边缘设置在其包含元素上边缘之下0px高的位置 */
+	        left: 0;
+	    }
+	
+	    .content ol li{
+	        /* 设置每个小点的大小 */
+	        width: 25px;
+	        height: 10px;
+	
+	        /* 设置里面的文字的大小 */
+	        font-size: 15px;
+	
+	        /* line-height 属性设置行间的距离（行高） */
+	        line-height: 20px;
+	
+	        /* 浮动左对齐 */
+	        float: left;
+	
+	        /* 设置文本居中 */
+	        text-align: center;
+	
+	        /* 把表格做成圆点 */
+	        border-radius: 2em;
+	
+	        /* 设置圆点的边框 */
+	        border: 5px solid #af9d9d;
+	    }
+		footer {
+		    position: fixed;
+		    width: 100%;
+		    bottom: 0;
+		    left: 0;
+		}
+		footer {
+		    background-color: #333;
+		    color: white;
+		    text-align: center;
+		    padding: 20px 0;
+		}
+		
+		.footer-content {
+		    width: 80%;
+		    margin: 0 auto;
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: center;
+		    flex-wrap: wrap;
+		}
+		
+		footer p {
+		    margin: 10px 0;
+		}
+		
+		.social-links a {
+		    margin: 0 10px;
+		    color: white;
+		    text-decoration: none;
+		    font-size: 18px;
+		}
+		
+		.social-links a:hover {
+		    text-decoration: underline;
+		}
+		
+		footer nav ul {
+		    list-style-type: none;
+		    padding: 0;
+		}
+		
+		footer nav ul li {
+		    display: inline;
+		    margin: 0 10px;
+		}
+		
+		@media (max-width: 768px) {
+		    .footer-content {
+		        flex-direction: column;
+		        align-items: center;
+		    }
+		
+		    .social-links {
+		        margin-bottom: 10px;
+		    }
+		
+		    footer nav ul li {
+		        display: block;
+		        margin: 5px 0;
+		    }
+		}
+		
+	</style>
+	
+	
+</head>
+<body>
+    <header>
+        <!-- 下拉菜单 -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">首页</a></li>
+                <li class="dropdown">
+                    <a href="#">著名景点</a>
+                    <div class="dropdown-content">
+                        <a href="#">象鼻山</a>
+                        <a href="#">漓江</a>
+                        <a href="#">阳朔</a>
+                    </div>
+                </li>
+                <li><a href="#">旅游攻略</a></li>
+                <li><a href="#">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>  
+    
+        <!-- 轮播图 -->
+		<img src="img/2436efd8edffcdc1a0d1edcd0639fb1c.jpg" style="display:none;">
+		  <img src="img/1282c90f47d0b4f24a7261fa15333e09.jpeg" style="display:none;">
+		<img src="img/96e058df8bd6f6657798be5625e9dcee.jpeg" style="display:none;">
+        <section id="carousel">
+            <!-- 轮播图内容 -->
+			  
+        <!-- 注册表单 -->
+        <section id="registration">
+            <h2>注册</h2>
+       
+			<form id="registrationForm">
+				<label for="username">用户名:</label>
+				<input type="text" id="username" name="username" required>
+			    <label for="password">密码:</label>
+			    <input type="password" id="password" name="password" required minlength="8" maxlength="18">
+			    <button type="submit">注册</button>
+			</form>
+        </section>
+    </div>
+	<footer>
+	    <div class="footer-content">
+	        <p>版权所有 &copy; 2024 你的网站名称. 保留所有权利。</p>
+	        <div class="social-links">
+	            <a href="https://twitter.com" target="_blank">Twitter</a>
+	            <a href="https://facebook.com" target="_blank">Facebook</a>
+	            <a href="https://instagram.com" target="_blank">Instagram</a>
+	        </div>
+	        <nav>
+	            <ul>
+	                <li><a href="#">网站地图</a></li>
+	                <li><a href="#">隐私政策</a></li>
+	                <li><a href="#">使用条款</a></li>
+	            </ul>
+	        </nav>
+	    </div>
+	</footer>
+<body>
+		    <!-- 整体框架 -->
+		    <div class="overall">
+		        <!-- 内容  -->
+		        <div class="content">
+		            <!-- 轮播图片 -->
+		            <ul>
+		                <li><img src="img/2436efd8edffcdc1a0d1edcd0639fb1c.jpg" alt=""></li>
+		                <li><img src="img/1282c90f47d0b4f24a7261fa15333e09.jpeg" alt=""></li>
+		                <li><img src="img/96e058df8bd6f6657798be5625e9dcee.jpeg" alt=""></li>
+						
+		            </ul>
+		            <!-- 轮播图的点 -->
+		            <ol>
+		                <li></li>
+		                <li></li>
+		                <li></li>
+		            </ol>
+		        </div>        
+		    </div>
+			<script>
+			    // 当页面载入的时候加载这个函数
+			    window.onload = function()
+			    {
+			
+			    // 获取大盒子的内容 为content的第一个元素 也就是ul中的内容
+			    var content = this.document.getElementsByClassName("content")[0];
+			
+			    // 获取ul中的li
+			    var li = content.getElementsByTagName("li");
+			
+			    // 函数传入两个参数，(i,j)
+			    function fun(i, j)
+			    {//转换图片函数，就是把透明度改了一下        
+			        li[i].style.opacity=1;
+			        li[j].style.opacity=0;
+			
+			        // 然后也把小图标的颜色改一下
+			        // 把图标改成白色
+			        // 如果图片数量发生改变 那么下面的3也要变成图片的数量
+			        li[i + 3].style.backgroundColor = "#ffffff";
+			
+			        // 把图标改成透明
+			        li[j + 3].style.backgroundColor = "#00000000";
+			    }
+			
+			    // 默认情况下轮播图为第一张
+			    fun(0, 1);//初始化下
+			    var i = 0;
+			    function auto()
+			    {//轮播循环函数
+			        i ++;
+			        // 当数组越界的时候
+			        if(i >= 3)
+			        {
+			          // 置为0
+			            i = 0;
+			            // 然后递归重新开始
+			            // 这里的2位3-1的意思
+			            fun(0, 2);
+			        }
+			        else
+			        {
+			            // 反之递归
+			            fun(i, i - 1);
+			        } 
+			    }
+			    // 设置变化的时间
+			    timer = this.setInterval(auto, 2000);
+			
+			    // 设置鼠标在轮播图上的时候 轮播图就停止播放
+			    content.onmouseover = function () 
+			    { 
+			        //鼠标划上去，停止轮播
+			        clearInterval(timer);
+			    }
+			
+			    // 设置鼠标在轮播图上的时候 轮播图就继续播放
+			    content.onmouseout = function () 
+			    { 
+			        //鼠标划出，继续轮播
+			        timer = setInterval(auto, 2000); //调用定时器
+			    }
+			    var j = 0;
+			    for(; j < 3; j++)
+			    {
+			        //点击小图标也可以转换图片
+			        li[j + 3].index = j;
+			        // 当点击小图标进行的函数
+			        li[j + 3].onclick = function()
+			        {
+			            fun(this.index, i)
+			            i = this.index;
+			        } 
+			    }
+			}
+			</script>
+    <script src="scripts.js">
+		
+		document.getElementById('registration_form').addEventListener('submit', function(event) {
+		    event.preventDefault(); // 阻止表单的默认提交行为
+		
+		    var password = document.getElementById('password').value;
+		    var messageDiv = document.getElementById('message');
+		
+		    if (password.length < 8 || password.length > 16) {
+		        messageDiv.textContent = '密码长度必须在8到16个字符之间！';
+		        messageDiv.style.color = 'red'; // 登录失败的消息颜色
+		    } else {
+		        messageDiv.textContent = '登录成功！';
+		        messageDiv.style.color = 'green'; // 登录成功的消息颜色
+		
+		        // 这里可以添加表单提交的代码，例如使用fetch API发送数据到服务器
+		        // fetch('注册用户的API地址', {
+		        //     method: 'POST',
+		        //     body: new FormData(this),
+		        //       // 其他选项...
+		        // })
+		        // .then(response => response.json())
+		        // .then(data => {  
+		        //     // 处理服务器响应
+		        // });
+		    }
+		}); 
+	</script>
+</body>
+</html>

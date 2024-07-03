@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>注册页面</title>
+		<link rel="stylesheet" href="./css/new_file01.css" type="text/css"/>
+	</head>
+	<body>
+		<div class="container">
+			<h2>注册</h2>
+			<form id="registrationForm" action="/submit-registration" method="post">
+				<div>
+					<label for="username">用户名:</label>
+					<input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9_]{5,12}$">
+					<span class="error" aria-live="polite"></span>
+				</div>
+				<div>
+					<label for="email">邮箱:</label>
+					<input type="email" id="email" name="email" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+					<span class="error" aria-live="polite"></span>
+				</div>
+				<div>
+					<label for="password">密码:</label>
+					<input type="password" id="password" name="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$">
+					<span class="error" aria-live="polite"></span>
+				</div>
+				<div>
+					<input type="submit" value="注册">
+				</div>
+			</form>
+		</div>
+<script src="./js/new_file01.js"></script>
+	</body>
+</html>

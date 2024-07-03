@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>妖精的尾巴</title>
+	</head>
+
+	<body>
+		<div class="wrapin">
+			<!--顶部-->
+			<!--  是定义了一个头部区域，class="clearfix" 是一个用于样式设置的类名。 -->
+			<header class="clearfix"> <a href="index.html" class="logo">妖精的尾巴</a><!-- 用于定义文档的页眉部分。 -->
+				<ul class="nav">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="#">人物介绍</a></li>
+					<select onchange="if (this.value) window.location.href=this.value">
+						<!--<select> 标签用于创建下拉选择框，onchange 属性指定当选择框的值发生改变时触发的事件处理函数-->
+						<option value="">请选择</option>
+						<!--<option> 标签用于定义下拉选择框中的选项，value 属性指定选项的值，如果未指定，则默认值为空字符串-->
+						<option value="https://www.sohu.com/a/124522693_480098">露西</option>
+						<option value="https://www.sohu.com/a/124359695_480098">纳兹</option>
+						<option value="https://baike.so.com/doc/5351788-5587246.html">哈比</option>
+						<!--以下三个 <option> 元素分别定义了三个不同的选项，每个选项的值为对应的网站链接，当用户选择该选项时，触发 onchange 事件，根据条件重定向到相应的链接-->
+					</select>
+					<script src="js/xialacaidan.js" type="text/javascript" charset="utf-8"></script>
+					<li><a href="zhuce.html">注册</a></li>
+				</ul>
+			</header>
+			<div class="banner">
+				<!-- 这是一个具有"banner"类名的外层容器 -->
+				<div class="wrap">
+					<!-- 这是一个具有"wrap"类名的内层容器 -->
+					<div class="banner-box">
+						<!-- 这是一个具有"banner-box"类名的盒子，用于包含轮播图相关元素 -->
+						<div class="slide-banner">
+							<!-- 这是一个具有"slide-banner"类名的元素，用于承载轮播图片的链接 -->
+							<a href="#">
+								<img src="./images/1.jpg" alt="" id="img">
+								<!-- 图片元素，通过id="img"来获取和操作 -->
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script src="js/lunbotu.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

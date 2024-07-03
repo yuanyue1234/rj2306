@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="轮播.css">
+		<link rel="stylesheet" href="注册.css" />
+		<style>
+			body{
+				 background-image: url('img/6.PNG');
+				  background-repeat: no-repeat;/* 默认情况下，背景图像会重复以填充整个元素背景，但这里设置为不重复。 */
+				  background-size: cover;/* 将背景图像扩展至足够大，以覆盖整个元素，同时保持图片的宽高比例 */
+				  background-position: center;/* 将背景图像在元素中居中显示 */
+				  background-attachment: fixed; /* 将背景图像设置为固定，即背景图像不随页面滚动而滚动 */
+			}
+		</style>
+	</head>
+	<body>
+		<select id="mySelect" onchange="handleSelect()"><!-- //onchange(更改) 是一个在HTML中使用的事件属性，它在表单元素的值发生变化时触发 -->
+<!-- 		//onchange="handleSelect句柄选择()": 这是一个事件处理器，它告诉浏览器当 select 元素的值发生变化时,应该调用 handleSelect 这个JavaScript函数。 -->
+		  <option value="option1">化妆品</option><!-- option选择 -->
+		  <option value="option2">零食</option>
+		  <option value="option3">日常用品</option>
+		</select>
+		
+		<div id="carousel" class="carousel"><!-- carousel通常是一个可以自动或手动切换内容的组件 -->
+		    <div class="slides">
+		  <img src="img/01.png" alt="Img 1" class="active">
+		  <img src="img/02.png" alt="Img 2">
+		  <img src="img/03.png" alt="Img 3">
+		  <img src="img/05.png" alt="Img 4">
+		  <img src="img/06.png" alt="Img 5">
+		  </div>
+		  <button id="prev" class="control-btn">&lt;</button><!-- &lt;全英文less than 代表 < -->
+		  <button id="next" class="control-btn">&gt;</button><!-- &gt;全英文greater than 代表 > -->
+		</div>
+		
+		<div class="form">
+		    <h2>小志商店</h2>
+		<form id="registrationForm"><!-- registrationForm"登入表单 在HTML代码中，"registrationForm" 可能是一个表单元素的ID，用于通过JavaScript或CSS选择和操作该表单。-->
+		    <label for="username">用户名:</label><!-- 标签用于定义表单控件的标签 -->
+		    <input type="text" id="username" name="username" required><br><!-- input输入标签 -->
+		    
+		    <label for="email">邮箱:</label>
+		    <input type="email" id="email" name="email" required><br>
+		    
+		    <label for="password">密码:</label>
+		    <input type="password" id="password" name="password" required><br>
+		    
+		    <input type="submit" value="注册">
+		</form>
+		</div>
+		<script src="js/注册.js"></script>
+		<script src="js/下拉.js"></script>
+		<script src="js/轮播图.js"></script>
+	</body>
+</html>

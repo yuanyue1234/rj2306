@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="./5.css">
+		
+	</head>
+	<body>
+		<div class="main">
+			<div class="head">
+		<div class="banner">
+			<ul id="imglist">
+				<li><img src="./img/6.png" alt="" /></li>
+				<li><img src="./img/7.png" alt="" /></li>
+				<li><img src="./img/8.png" alt="" /></li>
+				<li><img src="./img/9.png" alt="" /></li>
+				<li><img src="./img/6.png" alt="" /></li>
+			</ul>
+		 </div>
+		</div>
+		<div class="box">
+			<form id="registrationForm">
+			<h2>Login</h2>
+			<div class="input-box">
+				<label for="username">账号</label>
+				<input type="text" name="jf" id="username" >
+			</div>
+			<div class="input-box">
+				<label for="password">密码</label>
+				<input type="password" name="hjkdsf" id="password">
+			</div>
+			<div class="btn-box">
+				<div class="j">
+					<select id="choss">
+					<option value="1"><a href="">忘记密码</a></option>
+						<option value="1"><a href="">找回密码</a></option>
+						<option value="2"><a href="">冻结账号</a></option>
+					</select>
+				</div>
+				<button class="prve">登入</button>
+				<button  type="submit" onclick="register">注册</button>
+			</div>
+			</form>
+		</div>
+		</div>
+		<script>
+			
+			var left =0;
+			var timer;
+			run();
+			function run(){
+			if (left <= -3200){
+				left =0;
+			}
+				imglist.style.marginLeft =left + 'px';
+				var n = (left % 800 == 0) ? n = 1200 : 10;
+				left -= 10;
+				timer =setTimeout(run,n);
+			}
+			function imgchange(n){
+				let lt = - (n * 800);
+				imglist.style.marginLeft = lt + 'px';
+				left = lt;
+			}
+		</script>
+		<script src="5.js"></script>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>咖啡</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="content">
+			<div class="header">
+				<div class="logo"><a href="#"><img class=pic src="images/logo.png"></a></div>
+				<div class="nav">
+					<ul>
+						<li><a href="index.html">首页</a></li>
+						<li><a href="kafei.html">咖啡及文化</a></li>
+						<!-- （下拉选择框）onchange 事件表示当选择框的值发生改变时会执行后面的JS代码 -->
+						<select onchange="if (this.value) window.location.href=this.value">
+							          <!--   用于检查所选的值是否存在，如果存在则执行 即将页面重定向到所选值所对应的链接。 -->
+										 
+							<option value="">配方</option>
+							<option value="https://baike.baidu.com/item/%E6%9F%A0%E6%AA%AC%E8%8C%B6/6025749?fr=ge_ala">
+								茶</option>
+							<option value="https://haokan.baidu.com/v?pd=wisenatural&vid=16651656177310058553">蛋糕
+							</option>
+							<option value="https://haokan.baidu.com/v?pd=wisenatural&vid=9751820214937290570">咖啡
+							</option>
+						</select>
+						<li><a href="meishi.html">美食与饮品</a></li>
+						<li><a href="xinwen.html">美食新闻</a></li>
+						<li><a href="zhuce.html">注册</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="lunbo">
+				<div class="flashbox">
+					<div id=SwitchBigPic>
+						<div><a href="#"><img class="pic" src="images/01.jpg"></a></div>
+						<div><a href="#"><img class="pic" src="images/02.jpg"></a></div>
+						<div><a href="#"><img class="pic" src="images/03.jpg"></a></div>
+						<div><a href="#"><img class="pic" src="images/04.jpg"></a></div>
+						<div><a href="#"><img class="pic" src="images/05.jpg"></a></div>
+					</div>
+					<ul id=SwitchNav>
+						<li><a href="#"><img src="images/01.jpg"><b>夏天是什么味道？</b></a> </li>
+						<li><a href="#"><img src="images/02.jpg"><b>夏季甜点</b></a> </li>
+						<li><a href="#"><img src="images/03.jpg"><b>美味香槟</b></a> </li>
+						<li><a href="#"><img src="images/04.jpg"><b>各式点心</b></a> </li>
+						<li><a href="#"><img src="images/05.jpg"><b>店长推荐</b></a> </li>
+					</ul>
+				</div>
+			</div>
+			<div class="main">
+				<div class="xinwen">
+					<div class="title">美食新闻</div>
+					<ul>
+						<li>
+							<p><a href="#">有水则灵,漂流道开进亲子乐园,萌萌马卡龙色系又出新系列</a></p>
+							<span>06-01</span>
+						</li>
+						<li>
+							<p><a href="#">喝咖啡的好处和坏处:12个健康益处和六个缺点</a></p>
+							<span>06-01</span>
+						</li>
+						<li>
+							<p><a href="#">世界4大著名甜点,德国黑森林上榜,最后一种代表爱和幸福</a></p>
+							<span>06-01</span>
+						</li>
+						<li>
+							<p><a href="#">不加色素的彩虹蛋糕做法教学,女朋友、孩子看了一定很喜欢</a></p>
+							<span>06-01</span>
+						</li>
+						<li>
+							<p><a href="#">高颜值慕斯蛋糕,做法真的很简单,连烤箱都不要用,这样真好吃!</a></p>
+							<span>06-01</span>
+						</li>
+						<li>
+							<p><a href="#">无需烤箱,也能做出蓝莓慕斯蛋糕,夏日消暑佳品,入口即化真好吃</a></p>
+							<span>06-01</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer">
+				<p> 版权所有@夏季甜点-原色咖啡 </p>
+				<p> 京ICP备12345678号</p>
+			</div>
+			
+		
+	</body>
+</html>

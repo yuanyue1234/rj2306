@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赛博寡妇纪念网页</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <img src="1.jpg" alt="导航栏图片">
+    <div>
+      <button>夜之城 访问
+        Night City
+      </button>
+      <ul>
+        <li>大卫</li>
+        <li>露西</li>
+        <li>曼恩</li>
+        <li>丽贝卡</li>
+      </ul>
+    </div>
+    <div>
+      <button>荒坂公司
+      Arasaka</button>
+      <ul>
+        <li>荒坂三郎</li>
+        <li>Hanako</li>
+      </ul>
+    </div>
+    <div>
+      <button>没做
+
+      EMPTY</button>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+      </ul>
+    </div>
+    <div>
+      <button>没做
+      EMPTY</button>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+      </ul>
+    </div>
+  </nav>
+  <div class="slider">
+    <img src="2.jpg" class="active">
+    <img src="3.jpg">
+    <img src="4.jpg">
+  </div>
+
+
+  <form action="">
+    <label for="name">姓名：</label>
+    <input type="text" id="name" name="name" oninput="validateName(this)"><span id="nameError" style="color: red;"></span>
+
+    <label for="email">邮箱：</label>
+    <input type="email" id="email" name="email" oninput="validateEmail(this)"><span id="emailError" style="color: red;"></span>
+
+    <label for="password">密码：</label>
+    <input type="password" id="password" name="password" oninput="validatePassword(this)"><span id="passwordError" style="color: red;"></span>
+
+    <input type="submit" value="注册" disabled id="submitBtn">
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

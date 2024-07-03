@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>百度一下，你就知道</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			*{
+				margin:0;
+				padding:0;
+			}
+			.header{
+				height:60px;
+				
+				display: flex;
+				justify-content: space-between;
+				
+				padding: 0 24px;
+				
+			}
+			.header>div>span{
+				font-size: 13px;
+				color: #222222;
+				margin-right: 24px;
+				
+			}
+			.header>div{
+				display: flex;
+				align-items: center;
+			}
+			
+				
+			.header>.header-right>.login{
+				margin-right: 0PX;
+				margin-left: 8PX;
+				width: 48px;
+				height: 24px;
+				background-color: rgb(170, 170, 127);
+				color: white;
+				text-align: center;
+				line-height:24px;
+				border-radius:4PX;
+			
+			}
+			.main{
+				width: 654px;
+				height:600px;
+				margin: 0 auto;
+				/* background-color: pink; */
+			}
+			.logo{
+				width: 270px;
+				height:129px;
+				display:block;
+				margin: 0 auto;
+			}
+			form{
+				width: 654px;
+				height: 44px;
+				/* background-color: orange; */
+				display: flex;
+				position: relative;
+			}
+			form .txt{
+				width: 550px;
+				height: 44px;
+				box-sizing: border-box;
+				border: 2px solid #cccccc;
+				border-radius: 10px 0px 0xp 10px;
+				border-right: 0;
+				padding-right: 0;
+				padding-left: 30px;
+				font-size: 20px;
+			}
+			form .txt:focus{
+				border-color: #4e6ef2;
+			}
+			form .btn{
+				width: 108px;
+				height: 44px;
+				box-sizing: border-box;
+				border: 2px solid #cccccc;
+				border-radius: 0px 10px 10xp 0px;
+				border-left: 0;
+				background-color: #4e6ef2;
+				color: white;
+				font-size: 17px;
+			}
+			form>span{
+				position: absolute;
+				width: 24px;
+				height: 20px;
+				/* background-color: orange; */
+				right: 128px;
+				top: 50%;
+				transform: translateY(-50%);
+				background-size: 100%;
+				cursor: pointer;
+				
+			}
+			.icon1{
+				right: 168px;
+				
+				background-image: url("img/屏幕截图 2024-06-24 083746.png");
+			}
+			.icon1:hover{
+				background-position: 0px 72px;
+			}
+			.icon2:hover{
+				background-position: 0px 68px;
+			}
+			.icon2{
+				background-image: url("img/屏幕截图 2024-06-24 084250.png");
+				
+			}
+			.list{
+				width: 100%;
+				height: 136px;
+				/* background: orange; */
+				margin-top: 50px;
+			}
+			.list .top{
+				height: 24px;
+				display: flex;
+				justify-content: space-between;
+				font-size: 14px;
+				
+			}
+			.hot{
+				font-weight: bold;
+			}
+			.change{
+				color: #666666;
+			}
+			main{
+				width: 100%;
+				height: 120px;
+				column-count: 2;
+				column-gap: 130px;
+				position: relative;
+			}
+			main>span{
+				display: block;
+				height: 30px;
+				color: #222222;
+			}
+			main>span:hover{
+				text-decoration: underline;
+				color: cornflowerblue;
+				cursor: pointer;
+			}
+			.footer{
+				display: flex;
+				height: 39px;
+				/* background-color: orange; */
+				justify-content: center;
+				position: fixed;
+				bottom: 0;
+				width: 1700px;
+				align-items: center;
+			}
+			.footer span{
+				font-size: 13px;
+				color: #666666;
+				margin: 0 3px;
+			}
+			.footer span img{
+				width: 25px;
+				height: 15px;
+				display: block;
+			}
+			.wordbox{
+				position: absolute;
+				width: 548px;
+				height: 200px;
+				top:35px;
+				background-color: white;
+				z-index: 999;
+				box-sizing: border-box;
+				border: 2px solid #4e6ef2;
+				border-top: 0;
+				padding: 0 20px;
+				display:none;
+				
+			}
+			.wordbox hr{
+				position: relative;
+				top: 4px;
+			}
+			.wordbox span{
+				font-size: 13px;
+				color: #666666;
+				margin: 0 3px;
+				
+			}
+			
+			
+			.wordbox div{
+				width: 500px;
+				height: 24px;
+				background-color: white;
+				
+			}
+			.wordbox>div:hover{
+				text-decoration: underline;
+				cursor: pointer;
+				background-color: #f2f2f2;
+				text-decoration: none;
+			}
+			.wordbox>div>span:hover{
+				color:#4e6ef2;
+			}
+			.list>main a{
+				text-decoration: none;
+				color: #222222;
+			}
+			.list>main a:hover{
+				color:#4e6ef2;
+			}
+			.header>div>span a{
+				text-decoration: none;
+				color: #222222;
+				display: block;
+			}
+			.header>div>span a:hover{
+				color:#4e6ef2;
+				display: block;
+				
+			}
+			.carousel-images {  
+			  display: flex;  
+			  overflow-x: auto;  
+			  scroll-snap-type: x mandatory;  
+			  scroll-snap-align: start; /* 确保滚动对齐到每个元素的开始位置 */  
+			  align-items: center;  
+			  margin: 0 auto;  
+			  width: 100%; /* 或者设置为你想要的最大宽度 */  
+			  scroll-behavior: smooth; */ /* 平滑滚动效果 */
+			 
+			}  
+			  
+			.carousel-image {  
+			  flex: 0 0 auto;  
+			  width: 100%; /* 或者设置为具体的像素值，确保与容器宽度匹配 */  
+			  height: 400px;  
+			  margin-right: 10px; /* 图片之间的间距 */  
+			  display: block; /* 确保图片作为块级元素显示 */  
+			  scroll-snap-align: start; /* 确保图片在滚动时对齐到容器的开始位置 */  
+			}  
+			  
+			.carousel-image:last-child {  
+			  margin-right: 0; /* 移除最后一张图片右侧的间距 */  
+			}  
+			  
+			.carousel-controls {  
+			  display: flex;  
+			  justify-content: space-between;  
+			  margin-top: 10px;  
+			}  
+			  
+			button {  
+			  padding: 5px 10px;  
+			}
+			.carousel-images::-webkit-scrollbar {
+			    display: none; /* 这在WebKit浏览器中有效，如Chrome和Safari */  
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="header">
+			<div class="header-left">
+				<span><a href="#">新闻</a></span>
+				<span><a href="#">hao123</a></span>
+				<span><a href="#">地图</a></span>
+				<span><a href="#">贴吧</a></span>
+				<span><a href="#">视频</a></span>
+				<span><a href="#">图片</a></span>
+				<span><a href="#">网盘</a></span>
+				<span><a href="#">更多</a></span>
+			</div>
+			<div class="header-right">
+				<span>设置</span>
+				<span class="login"><a href="登录注册.html">登录</a></span>
+				
+			</div>
+		</div>
+	
+	<div class="main">
+		
+		<img class="logo" src="https://th.bing.com/th/id/OIP.v4wW0RdeG16bDXWgdtO9xQHaFw?w=232&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+		<form>
+			<input class="txt" type="text" id="searchInput" />
+			<input class="btn" type="button" value="百度一下" />
+			<span class="icon1"></span>
+			<span class="icon2"></span>
+			<div class="wordbox" id="dropdownMenu">
+				<hr color="#f1f1f1">
+					<div><span>周杰伦专辑</span></div>
+					<div><span>周杰伦七里香</span></div>
+					<div><span>周杰伦演唱会</span></div>
+					<div><span>周杰伦一路向北</span></div>
+					<div><span>周杰伦图片</span></div>
+					<div><span>周杰伦歌曲排名</span></div>
+					<div><span>周杰伦公司</span></div>
+					<div><span>周杰伦搁浅</span></div>
+			</div>
+		</form>
+		<div class="list">
+			<p class="top">
+				<span class="hot">百度热搜</span>
+				<span class="change">换一换</span>
+				<main>
+					<span><a href="周杰伦专辑图片.html">周杰伦专辑图片</a></span>
+					<span>数学满分! 四川绵阳一男生高考710分</span>
+					<span>首个高考成绩被屏蔽的人出现了</span>
+					<span>米里含肉! 我国成功研发出猪肉米</span>
+					<span>男子飞机上发病离世留30多套房产</span>
+					<span>高考生713分当场送恩师束脩六礼</span>
+				</main>
+			</p>
+		</div>
+		<div class="carousel">
+		  <div class="carousel-images" id="carouselImages">  
+		    <!-- 假设你有4张图片 -->  
+		    <img class="carousel-image" src="img/u=255677113,2189899935&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="Image 1">  
+		    <img class="carousel-image" src="img/u=1265292437,2833866430&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="Image 2">  
+		    <img class="carousel-image" src="img/u=1420568674,2338005403&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="Image 3">  
+		    <img class="carousel-image" src="img/u=2857817807,2956323883&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="Image 4">  
+			<img class="carousel-image" src="img/u=3690421828,1204930497&fm=253&fmt=auto&app=138&f=JPEG.webp" alt="Image 5">
+			
+		  </div>  
+		  <div class="carousel-controls">  
+		    <button id="prevButton">Prev</button>  
+		    <button id="nextButton">Next</button>  
+		  </div>  
+		</div>  
+	</div>
+	
+	<div class="footer">
+		<span>关于百度</span>
+		<span>About Baidu</span>
+		<span>使用百度前必读</span>
+		<span>帮助中心</span>
+		<span>企业推广</span>
+		<span>京公网安备11000002000001号</span>
+		<span>京ICP证030173号</span>
+		<span>互联网新闻信息服务许可证11220180008</span>
+		<span>网络文化经营许可证：</span>
+		<span>京网文〔2023〕1034-029号</span>
+		<span>信息网络传播视听节目许可证 0110516</span>
+		<span>
+			<img src="img/屏幕截图 2024-06-24 093814.png">
+		</span>
+		
+	</div>
+	<script>
+		// 当文档加载完成后执行  
+		document.addEventListener('DOMContentLoaded', function() {  
+		    // 获取搜索框和下拉菜单元素  
+		    var searchInput = document.getElementById('searchInput');  
+		    var dropdownMenu = document.getElementById('dropdownMenu');
+		  
+		    // 为搜索框添加focus和blur事件监听器  
+		    searchInput.addEventListener('focus', function() {  
+		        dropdownMenu.style.display = 'block'; // 显示下拉菜单  
+		    });  
+		  
+		    searchInput.addEventListener('blur', function() {  
+		        dropdownMenu.style.display = 'none'; // 隐藏下拉菜单  
+		    });  
+		  
+		    // 为按钮添加点击事件监听器（可选，因为focus已经足够）  
+		    var btn = document.querySelector('.btn');  
+		    btn.addEventListener('click', function() {  
+		        dropdownMenu.style.display = 'block'; // 显示下拉菜单  
+		    });  
+			
+		});
+		 
+	</script>
+	<script>
+	 document.addEventListener('DOMContentLoaded', function() {  
+	   const carouselImages = document.getElementById('carouselImages');  
+	   const images = carouselImages.getElementsByTagName('img');  
+	   let currentIndex = 0;  
+	   let autoplayInterval;  
+	   let isHovering = false; // 用来追踪是否正在悬停在轮播图上  
+	   
+	   function goToSlide(index) {  
+	     carouselImages.scrollLeft = index * carouselImages.scrollWidth / images.length;  
+	     currentIndex = index;  
+	   }  
+	   
+	   function startAutoplay() {  
+	     if (!isHovering) { // 如果鼠标没有悬停在轮播图上，则开始自动播放  
+	       autoplayInterval = setInterval(function() {  
+	         goToSlide((currentIndex + 1) % images.length);  
+	       }, 3000);  
+	     }  
+	   }  
+	   
+	   function stopAutoplay() {  
+	     clearInterval(autoplayInterval); // 停止自动播放  
+	   }  
+	   
+	   document.getElementById('prevButton').addEventListener('click', function() {  
+	     goToSlide(currentIndex - 1);  
+	     stopAutoplay(); // 停止自动播放，因为用户正在与轮播图交互  
+	     // 不需要立即重新开始自动播放，等待用户停止交互后再开始  
+	   });  
+	   
+	   document.getElementById('nextButton').addEventListener('click', function() {  
+	     goToSlide(currentIndex + 1);  
+	     stopAutoplay(); // 停止自动播放，因为用户正在与轮播图交互  
+	     // 不需要立即重新开始自动播放，等待用户停止交互后再开始  
+	   });  
+	   
+	   carouselImages.addEventListener('mouseover', function() {  
+	     isHovering = true;  
+	     stopAutoplay(); // 鼠标悬停时停止自动播放  
+	   });  
+	   
+	   carouselImages.addEventListener('mouseout', function() {  
+	     isHovering = false;  
+	     // 在用户停止悬停一段时间后（例如1000毫秒）再开始自动播放  
+	     setTimeout(startAutoplay, 3000);  
+	   });  
+	   
+	    
+	 });
+	</script>  
+	  
+	
+	</body>
+</html>

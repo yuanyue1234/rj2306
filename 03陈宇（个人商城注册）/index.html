@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="轮播.css">
+		<link rel="stylesheet" href="下拉.css">
+		<link rel="stylesheet" href="注册.css">
+		<title></title>
+	</head>
+	<body>
+		
+<div id="carousel" class="carousel"><!-- carousel通常是一个可以自动或手动切换内容的组件 -->
+		    <div class="slides">
+		  <img src="1.jpg" alt="1" class="active">
+		  <img src="2.jpg" alt="2">
+		  <img src="3.jpg" alt="3">
+		  <img src="4.jpg" alt="4">
+		  </div>
+		  <button id="prev" class="control-btn">&lt;</button><!-- &lt;全英文less than 代表 < -->
+		  <button id="next" class="control-btn">&gt;</button><!-- &gt;全英文greater than 代表 > -->
+		</div>
+		<select id="mySelect" onchange="handleSelect()">
+<!-- //onchange(更改) 是一个在HTML中使用的事件属性，它在表单元素的值发生变化时触发 -->
+<!--//onchange="handleSelect句柄选择()": 这是一个事件处理器，它告诉浏览器当 select 元素的值发生变化时,
+应该调用 handleSelect 这个JavaScript函数,HTML 元素表示提供选项菜单的控件。 -->
+				  <option value="option1">选择注册商城类型</option>
+				  <option value="option2">金色商城</option>
+				  <option value="option3">百货商场</option>
+				  <!-- <option> HTML 元素用于定义 <select>、<optgroup> 或 <datalist> 元素中包含的项,
+				  属性的内容表示要与表单一起提交的值-->
+				</select>
+				<div class="container">
+				    <h1>注册</h1>  
+				    <div class="div1">  
+				      用户名： <input type = "text" placeholder = "输入用户名" id = "Name"/>  
+				    <label id="lname"></label><br/>  <!-- placeholder解释输入字段的预期格式-->
+				      密码：  <input type = "text" placeholder = "输入密码" id = "Pwd1"/>  
+				    <label id="lpass1"></label><br/>  
+				      确认密码：<input type = "text" placeholder = "再次输入密码" id = "Pwd2"/>  
+				    <label id="lpass2"></label><br/>  
+				        性别：<input type="radio"  name="sex" id="sex1"/>  男  
+				     <input type="radio"  name="sex" id="sex2"/>  女<br/>  
+				       手机号码：<input type="text" placeholder="手机号" id="telphone"/>  
+				     <label id="ltelphone"></label><br/>  
+				       固定电话：<input type="text" id="phone1"/>-<input type="text" id="phone2"/>-<input type="text" id="phone3"/>  
+				     <label id="lphone"></label><br/>  
+				       兴趣爱好:<input type="checkbox" id="hobby1"/>全选<input type="checkbox" id="hobby2"/>音乐<input type="checkbox" id="hobby3"/>美术<input type="checkbox" id="hobby4"/>运动<input type="checkbox" id="hobby5"/>读书<input type="checkbox" id="hobby6"/>编程<br/>  
+				     <input type="button" value="注册" id="btn1"/>  
+				     <input type="reset"  value="重置" id="btn2"/>  
+				    </div>      
+				</div>    
+		<script src="轮播.js"></script>
+		<script src="下拉.js"></script>
+		<script src="注册.js"></script>
+		</body>
+		</html>

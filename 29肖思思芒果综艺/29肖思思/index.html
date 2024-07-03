@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="轮播.css">
+		<link rel="stylesheet" href="注册.css" />
+		<style>
+			body{
+				 background-image: url(img/石凯waifu2x.png);
+				                  background-repeat: no-repeat;
+				                  background-size: cover;
+				                  background-position: center;
+				                  background-attachment: fixed;
+			}
+		</style>
+	</head>
+	<body>
+		<select id="mySelect" onchange="handleSelect()"><!-- //onchange(更改) 是一个在HTML中使用的事件属性，它在表单元素的值发生变化时触发 -->
+<!-- 		//onchange="handleSelect句柄选择()": 这是一个事件处理器，它告诉浏览器当 select 元素的值发生变化时,应该调用 handleSelect 这个JavaScript函数。 -->
+		  <option value="option1">综艺</option>
+		  <option value="option2">院人</option>
+		  <option value="option3">芒果TV</option>
+		</select>
+		
+		<div id="carousel" class="carousel"><!-- carousel通常是一个可以自动或手动切换内容的组件 -->
+		    <div class="slides">
+		  <img src="img/密神.jpg" alt="Img 1" class="active">
+		  <img src="img/跳地.jpg" alt="Img 2">
+		  <img src="img/魔方.jpg" alt="Img 3">
+		  <img src="img/大侦探.jpg" alt="Img 4">
+		  <img src="img/森林进化论.jpg" alt="Img 5">
+		  </div>
+		  <button id="prev" class="control-btn">&lt;</button><!-- &lt;全英文less than 代表 < -->
+		  <button id="next" class="control-btn">&gt;</button><!-- &gt;全英文greater than 代表 > -->
+		</div>
+		
+		<div class="form">
+		    <h2>芒果注册</h2>
+		<form id="registrationForm">
+		    <label for="username">用户名:</label>
+		    <input type="text" id="username" name="username" required><br>
+		    
+		    <label for="email">邮箱:</label>
+		    <input type="email" id="email" name="email" required><br>
+		    
+		    <label for="password">密码:</label>
+		    <input type="password" id="password" name="password" required><br>
+		    
+		    <input type="submit" value="注册">
+		</form>
+		</div>
+		<script src="js/注册.js"></script>
+		<script src="js/下拉.js"></script>
+		<script src="js/轮播图.js"></script>
+	</body>
+</html>

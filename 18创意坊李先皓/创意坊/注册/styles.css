@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image:url(file:///C:/Users/Administrator/Desktop/创意坊/注册/img/1.jpg);
+    display: flex;
+    justify-content: center;
+    margin: 180px;
+	
+}
+
+.form{
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+	height: 350px;
+}
+
+h2 {
+    margin-bottom: 20px;
+	text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	margin-left: 10px;
+}
+
+button:hover {
+    background-color: skyblue;
+}
+
+.error {
+    color: red;
+    font-size: 0.875em;
+    margin-bottom: 10px;
+    display: none;
+}

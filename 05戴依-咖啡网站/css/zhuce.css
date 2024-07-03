@@ -1,0 +1,58 @@
+ body {
+						/* 无衬线字体 */
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+    }
+
+    form {
+      width: 300px;
+	/*  用于在元素的边框外创建空白区域 */
+      margin: 0 auto;
+	  /* 内边距 */
+      padding: 20px;
+	  
+      background-color: #fff;
+	  /* 设置元素边框的圆角半径 */
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+    }
+/* 用于创建输入字段的元素 */
+    input[type="text"],          /* 输入普通文本 */
+    input[type="password"],      /* 输入的内容会以掩码形式显示，用于输入密码 */
+    input[type="email"],
+	/* 创建下拉列表的元素 */
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {      /* 用于提交表单 */
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;           /* 将鼠标指针的样式更改为手形指针 */
+	  
+    }
+
+    input[type="submit"]:hover {
+		/* 当鼠标指针悬停在类型为 submit 的输入元素上时，应用特定的样式 */
+      background-color: #45a049;
+    }

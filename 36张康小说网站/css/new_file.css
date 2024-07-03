@@ -1,0 +1,47 @@
+.nav{
+				
+				height: 40px;
+				background: white;
+				box-shadow: 0px 1px 2px #666;
+				
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				/* 去掉外边距 */
+				text-decoration: none;
+				list-style: none;
+				/* 去掉不必要的样式 */
+			}
+			
+			.libt{
+				/* 让列表横排 */
+				float: left;
+				/* 设置他的宽高 */
+				width: 140px;
+				height: 50px;
+				/* 字水平剧中 */
+				text-align: center;
+				line-height: 40px;
+			}
+			/* 超链接样式 */
+			.libt a{
+				color: black;
+				display: block;/* 块显示 */
+			}
+			/* 设置鼠标停时背景颜色 */
+			.libt a:hover{
+				background:  #800080;
+			}
+			.droplist{
+				box-shadow: 0px 1px 2px #666;
+				/* display: none; *//* 隐藏 */
+			}
+			/* 显示 */
+			/* .libt:hover .droplist{
+				display: block; */
+			/* } */
+			.droplist li{
+				/* 菜单栏选项边框 */
+				border-top:1px solid black;
+			}

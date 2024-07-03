@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>注册页面</title>
+<link rel="stylesheet" href="css/游戏页面.css">
+<script src="js/游戏页面.js" defer></script>
+</head>
+<body>
+  <div class="carousel">
+    <div class="slides">
+      <img src="img/img/01.jpg" style="display: block;"alt="Image 1" class="slide">
+      <img src="img/img/02.jpg"alt="Image 2" class="slide">
+      <img src="img/img/00.jpg" alt="Image 3" class="slide">
+    </div>
+    </div>
+    <button class="prev" onclick="moveSlide(3)"><</button>
+    <button class="next" onclick="moveSlide(-3)">></button>
+  </div>
+</div>
+<div class="container">
+  <h1>队伍选择页面</h1>
+  <form id="registration-form">
+    <label for="username">姓名:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">邮箱:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="country">选择小队:</label>
+    <select id="country" name="country">
+      <option value="">--请选择加入队伍--</option>
+      <option value="usa">金小队</option>
+      <option value="uk">雷狮海盗团</option>
+      <option value="canada">黑洞队伍</option>
+    </select>
+    <input type="submit" value="登入">
+  </form>
+</body>
+</html>

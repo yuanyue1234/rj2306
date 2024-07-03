@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS项目</title>
+    <style>
+      /* 下拉菜单 */
+        #all{           
+            color: #ff00ff;
+			background-color: #ffff7f;
+			height: ;
+        }
+        /* CSS样式开始 */
+        .dropdown {
+          display: none;
+          /* 初始时隐藏下拉菜单 */
+        }
+    
+        .dropdown.show {
+          display: block;
+          /* 当.dropdown元素有.show类时显示下拉菜单 */
+        }
+    
+        .dropdown a {
+          text-align: left;
+          font-size: 14px;
+          /* 设置下拉菜单中链接的文本对齐和字体大小 */
+        }
+    
+        .dropdown :hover {
+          text-decoration: underline;
+          /* 鼠标悬停时给下拉菜单中的链接添加下划线 */
+        }
+    
+    
+        input {
+          margin: auto;
+          display: block;
+          width: 100%;
+          padding: .65rem .65rem;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 2.5;
+          color: #00aa7f;
+          appearance: none;
+          background-color: #ffaa7f;
+          border: solid 1px #aaaaff;
+          border-radius: 5px;
+          /* 设置输入框的样式 */
+        }
+    
+    
+        label {
+          font-weight: 300;
+          line-height: 34px;
+          /* 设置标签的字体粗细和行高 */
+        }
+    .dropdown a{
+        background-color: #00aa7f;
+        border-radius: 6px;
+        line-height: 20px;
+        padding: 10px;
+    }
+    </style>
+
+    <style>
+      /* 轮播图 */
+    *{
+        box-sizing: border-box;
+    }
+    h2{
+        text-align: center;
+        color: #ffaaff;
+        font-size: 30px;
+        /* 设置h3元素的文本对齐、颜色和字体大小 */
+    }
+	a{
+		font-size: 30px;
+		 color:#aaffff;
+	}
+	label{
+		font-size: 20px;
+		 color:#55aaff;
+	}
+	button{
+		color:#aa5500;
+		font-size: 18px;
+	}
+    img{
+        overflow-clip-margin: content-box;
+        overflow:auto;
+    }
+    .content-img{
+        width: 100%; /* 设置宽度为100% */
+        height: 100%;
+        height: 0;
+        padding-top: 56.25%;
+        position: relative;
+        font-size: 40px;
+    }
+    .content-img img{
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 8px;
+        object-fit: cover; 
+        position: absolute;
+    }
+    .carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1;
+}
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+    </style>
+</head>
+<body>
+    <div id="all">
+        <div class="wrapper">
+            <div class="main">
+                <div class="content">
+                    <div class="content-top" id="content-top">
+                        <div class="content-img">
+                            <img src="../img/image4.jpg">
+                            <button class="carousel-control prev" id="left"><</button> <!-- 左箭头图标 -->
+                            <button class="carousel-control next" id="right">></button> <!-- 右箭头图标 -->
+                        </div>
+                        <br>
+                        <h2>夏目友人帐注册</h2>
+                        <!-- 页面主标题 -->
+                        <label for="user" id="账号" name="账号">账号:</label>
+                        <!-- 账号输入框的标签 -->
+                        <input type="text" name="账号" id="user"><br>
+                        <!-- 账号输入框 -->
+                        <label for="pswd" id="密码" name="密码">密码:</label>
+                        <!-- 密码输入框的标签 -->
+                        <input type="password" name="密码" id="pswd">
+                        <!-- 密码输入框 -->
+                        <br>
+                        <div class="container">
+                          <button class="btn" id="btn">模式</button>
+                          <!-- 难度选择按钮 -->
+                          <label class="bx bx-chevron-down" id="arrow"></label>
+                          <!-- 下拉箭头图标 -->
+                          <div class="dropdown" id="dropdown">
+                            <br>
+                            <a><i id="1">模式一</i></a>
+                            <!-- 下拉菜单选项1 -->
+                            <a><i id="2">模式二</i></a>
+                            <!-- 下拉菜单选项2 -->
+                            <a><i id="3">模式三</i></a>
+                            <!-- 下拉菜单选项3 -->
+                          </div>
+                        </div>
+                        <div style="display: block; float: right;">
+                          <input style="color: #00007f; width: 100px; text-align: center; background-color: #00aa00;" id="submit" type="submit"
+                            value="确定"  onclick="register()"/>
+                          <!-- 提交按钮 -->
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+// 注册
+document.addEventListener('DOMContentLoaded', function () {
+  const btn = document.getElementById('btn');
+  const arrow = document.getElementById('arrow');
+  const dropdown = document.getElementById('dropdown');
+  const arrowElement = document.getElementById('arrow');
+
+  arrow.addEventListener('mouseenter', function() {
+    toggleArrow();
+  });
+
+  btn.addEventListener('click', function() {
+    toggleArrow();
+  });
+
+  function toggleArrow(){
+    dropdown.classList.toggle('show');
+    arrowElement.classList.toggle('bx-chevron-up');
+    dropdown.querySelectorAll('a > i').forEach(function (item) {
+      item.addEventListener('click', function () {
+        btn.textContent = item.textContent;
+        dropdown.classList.remove('show');
+      });
+    });
+  }
+});
+
+function register() {
+  const username = document.getElementById('user').value;
+  const password = document.getElementById('pswd').value;
+  const btn = document.getElementById('btn');
+  const trouble = btn.textContent;
+
+  if (username.length >= 8 && password.length >= 8) {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (passwordRegex.test(password)) {
+      alert(`账号创建成功!\n账号: ${username}\n密码: ${password}\n难度: ${trouble}`);
+    } else {
+      alert('密码必须包含大小写字母、数字和特殊字符!');
+    }
+  } else {
+    alert('账号和密码必须至少8位以上!');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() { 
+    const leftButton = document.getElementById('left')
+    const rightButton = document.getElementById('right')
+    let i = 0;
+    let timer;
+    rightButton.addEventListener('click', function() {
+        i = (i + 1) % 5;
+        toggle();
+    });
+
+    leftButton.addEventListener('click', function() {
+        i = (i - 1 + 5) % 5;
+        toggle();
+    });
+
+    const img = document.querySelector(".content img");
+
+    function toggle() {
+        img.src = "https://asunny-1314135129.cos.ap-guangzhou.myqcloud.com/img/0" + i + '.png';
+    }
+
+    const footer = document.querySelector(".foot");
+
+    timer = setInterval(function() {
+        rightButton.click();
+    }, 2000);
+
+    footer.addEventListener('mouseleave', function() {
+        timer = setInterval(function() {
+            rightButton.click();
+        }, 2000);
+    });
+
+    footer.addEventListener('mouseenter', function() {
+        clearInterval(timer);
+    });
+});
+</script>

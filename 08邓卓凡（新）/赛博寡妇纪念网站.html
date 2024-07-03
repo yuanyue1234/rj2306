@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>赛博寡妇纪念网页</title>
+
+  <style>
+    @font-face {
+      font-family: 'Cyberpunk';
+      src: url('4.ttf') format('truetype');
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 导航栏样式 */
+    nav {
+      background-color: #f8fc0b;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav img {
+      width: 300px;
+      height: 100%;
+      margin-left: 30px;
+    }
+
+    nav div {
+      position: relative;
+    }
+
+    nav div button {
+      padding: 15px;
+      width: 150px;
+      background-color: #f8fc0b;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      color: #00bfff;
+      font-size: 1.3em;
+      font-family: 'Cyberpunk';
+    }
+
+    nav div ul {
+      display: none;
+      position: absolute;
+      background-color: #fbee0d;
+      min-width: 200px;  
+      min-height: 150px;  
+      box-shadow: 0px 8px 16px 0px rgba(74, 190, 239, 1.0);
+      z-index: 1;
+      top: 100%;
+      margin-top: 0;
+      list-style-type: none;
+      padding-left: 0;
+      opacity: 0;  
+      transition: opacity 1.5s ease;  /* 调整动画过渡时间和缓动效果 */
+    }
+
+    nav div:hover ul {
+      display: block;
+      opacity: 1;  
+    }
+
+    nav div ul li {
+      font-family: "楷体";
+      color: lightblue;
+      font-weight: bold;
+      padding: 15px 0;  
+      width: 100%;  
+    }
+
+    nav div ul li:hover {
+      background-color: rgba(255, 255, 255, 0.5);  
+      transform: scale(1.1);  
+      transition: all 0.5s ease;  
+    }
+
+    /* 轮播图样式 */
+ .slider {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+ .slider img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+ .slider img.active {
+      opacity: 1;
+    }
+
+    /* 注册表样式 */
+    form {
+      width: 200px;
+      padding: 50px;
+      border: 2.5px solid #fff;
+      border-radius: 8px;
+      background-color: #f8fc0b;
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 5px;
+      border: 1px solid #d8efef;
+      border-radius: 20px;
+    }
+
+    form input[type="submit"] {
+      background-color: #00BFFF;
+      Color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #ddfdff;
+    }
+  </style>
+  
+  
+  
+</head>
+<body>
+  <nav>
+    <img src="1.jpg" alt="导航栏图片">
+    <div>
+      <button>夜之城 访问
+        Night City
+      </button>
+      <ul>
+        <li>大卫</li>
+        <li>露西</li>
+        <li>曼恩</li>
+        <li>丽贝卡</li>
+      </ul>
+    </div>
+    <div>
+      <button>荒坂公司
+      Arasaka</button>
+      <ul>
+        <li>荒坂三郎</li>
+        <li>Hanako</li>
+      </ul>
+    </div>
+    <div>
+      <button>没做
+      
+      EMPTY</button>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+      </ul>
+    </div>
+    <div>
+      <button>没做
+      EMPTY</button>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+      </ul>
+    </div>
+  </nav>
+  <div class="slider">
+    <img src="2.jpg" class="active">
+    <img src="3.jpg">
+    <img src="4.jpg">
+  </div>
+  
+  
+  
+  <form action="">
+    <label for="name">姓名：</label>
+    <input type="text" id="name" name="name" oninput="validateName(this)"><span id="nameError" style="color: red;"></span>
+
+    <label for="email">邮箱：</label>
+    <input type="email" id="email" name="email" oninput="validateEmail(this)"><span id="emailError" style="color: red;"></span>
+
+    <label for="password">密码：</label>
+    <input type="password" id="password" name="password" oninput="validatePassword(this)"><span id="passwordError" style="color: red;"></span>
+
+    <input type="submit" value="注册" disabled id="submitBtn">
+  </form>
+
+
+
+  <script>
+    // 姓名验证正则表达式（只允许字母和空格） 
+      let regex = /^[A-Za-z\s]+$/;
+      if (regex.test(input.value)) {
+        document.getElementById('nameError').innerHTML = '';
+        enableSubmitIfAllValid();
+      } else {
+        document.getElementById('nameError').innerHTML = '姓名只能包含字母和空格';
+        disableSubmitButton();
+      }
+    }
+
+    // 邮箱验证正则表达式
+    function validateEmail(input) {
+      let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (regex.test(input.value)) {
+        document.getElementById('emailError').innerHTML = '';
+        enableSubmitIfAllValid();
+      } else {
+        document.getElementById('emailError').innerHTML = '请输入有效的邮箱地址';
+        disableSubmitButton();
+      }
+    }
+
+    // 密码验证正则表达式（至少 6 个字符）
+    function validatePassword(input) {
+      let regex = /^.{6,}$/;
+      if (regex.test(input.value)) {
+        document.getElementById('passwordError').innerHTML = '';//获取页面特定DOM元素
+        enableSubmitIfAllValid();
+      } else {
+        document.getElementById('passwordError').innerHTML = '密码至少 6 个字符';
+        disableSubmitButton();
+      }
+    }
+		//自定义的函数名
+    function enableSubmitIfAllValid() {
+      let nameInput = document.getElementById('name');
+      let emailInput = document.getElementById('email');
+      let passwordInput = document.getElementById('password');
+
+      if (nameInput.value && emailInput.value && passwordInput.value) {
+        document.getElementById('submitBtn').disabled = false;
+      }
+    }
+	//函数调用
+    function disableSubmitButton() {
+      document.getElementById('submitBtn').disabled = true;
+    }
+
+    // 新增轮播图自动切换功能
+    let sliderImages = document.querySelectorAll('.slider img');
+    let currentImage = 0;
+
+    function autoSlide() {
+      console.log('切换轮播图，当前索引:', currentImage);
+      sliderImages[currentImage].classList.remove('active');
+      currentImage = (currentImage + 1) % sliderImages.length;
+      sliderImages[currentImage].classList.add('active');
+    }
+
+    setInterval(autoSlide, 3000);
+  </script>
+</body>
+
+</html>

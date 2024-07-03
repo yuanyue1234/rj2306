@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝案例</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		/* styles.css */
+		body, html {
+		    margin: 0;
+		    padding: 0;
+		    font-family: Arial, sans-serif;
+		}
+		
+		.tb-nav {
+		    background: #d81e06;
+		    color: white;
+		    padding: 10px 20px;
+		    /* display: flex; */
+		    justify-content: space-between;
+		    align-items: center;
+		}
+		
+		.tb-logo {
+		    font-size: 24px;
+		}
+		
+		.tb-menu {
+		    list-style: none;
+		    display: flex;
+		}
+		
+		.tb-menu li {
+		    padding: 0 15px;
+		    position: relative;
+		}
+		
+		.tb-menu .dropdown-content {
+		    display: none;
+		    position: absolute;
+		    background-color: #fff;
+		    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+		    padding: 12px 16px;
+		    z-index: 1;
+		}
+		
+		.tb-menu .dropdown:hover .dropdown-content {
+		    display: block;
+		}
+		
+		
+		
+		.product-list {
+		    /* flex-wrap: wrap; */
+		    justify-content: space-between;
+			white-space: 100%;
+		}
+		
+		.product-item {
+		    width: 23%;
+		    margin-bottom: 20px;
+		    border: 1px solid #ddd;
+		    padding: 10px;
+		}
+		
+		.product-item img {
+		    width: 100%;
+		    height: auto;
+			margin-right: 20px;
+		}
+		.product-item 
+		
+		.tb-footer {
+		    background: #333;
+		    color: white;
+		    text-align: center;
+		    padding: 20px 0;
+		}
+		
+		/* 响应式设计 */
+		@media (max-width: 768px) {
+		    .product-item {
+		        width: 48%;
+		    }
+		}
+		#all{
+		    margin: auto;
+		    width: 1800px;
+		    height: 400px;
+		}
+		#all i{
+		    font-size: 40px;
+		}
+		.content{
+		    width: 100%; /* 设置宽度为100% */
+		   
+		    /* padding-top: 56.25%;：通过设置上内边距为宽度的56.25%来控制高度，从而实现16:9的宽高比。
+		       position: relative;：使容器成为相对定位，这样它内部的绝对定位元素可以相对于它定位。 */
+		}
+		.content img{
+		    height: 380px;
+		    display: block;
+		    width: 100%;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    object-fit: cover; /* 保持宽高比，多余的部分会被裁剪 */
+		    /* position: absolute;：将图片设置为绝对定位，使其相对于容器进行定位。
+		        top: 0;和left: 0;：将图片放置在容器的左上角。
+		        object-fit: cover;：保持图片的宽高比，同时裁剪超出的部分以完全覆盖容器。 */
+		}
+		*{
+		    box-sizing: border-box;
+		}
+		h3{
+		    text-align: center;
+		    color: #8D0000;
+		    font-size: 24px;
+			 text-align: center;
+		    /* 设置h3元素的文本对齐、颜色和字体大小 */
+		}
+		img{
+		    overflow-clip-margin: content-box;
+		    overflow:auto;
+		}
+		.foot{
+		    text-align: center;
+		    background-color: #FFD700;
+		}
+		.slider-indicator{
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		    display: flex;
+		    align-items: center;
+		}
+		
+	</style>
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <nav class="tb-nav">
+        <div class="tb-logo">淘宝</div>
+        <ul class="tb-menu">
+            <li><a href="#">首页</a></li>
+            <li class="dropdown">
+                <a href="#">分类</a>
+                <div class="dropdown-content">
+                    <a href="#">男装</a>
+                    <a href="#">女装</a>
+                    <a href="#">童装</a>
+                    <!-- 更多分类 -->
+                </div>
+            </li>
+            <li><a href="http://127.0.0.1:8848/%E4%BD%9C%E4%B8%9A1/%E7%99%BB%E5%BD%95/%E7%99%BB%E5%BD%95.html">登录</a></li>
+            <li><a href="http://127.0.0.1:8848/%E4%BD%9C%E4%B8%9A1/%E6%B3%A8%E5%86%8C/new_file.html">注册</a></li>
+        </ul>
+    </nav>
+
+   <div id="all">
+       <div class="content">
+           <img src="img/00.png"> <!-- 默认显示的图片 ,请你替换成自己的图片相对路径 --> 
+           <div class="foot">
+               <i id="left" class='bx bxs-left-arrow-circle' ></i> <!-- 左箭头图标 -->
+               <i id="right" class='bx bxs-right-arrow-circle' ></i> <!-- 右箭头图标 -->
+           </div>
+       </div>
+   </div>
+
+    <!-- 商品列表 -->
+    <div class="product-list">
+        <div class="product-item">
+            <img src="img/9.jpg" alt="商品图片">
+            <div class="product-info">
+                <h3>商品标题</h3>
+                <p>商品描述</p>
+                <p class="price">￥100.00</p>
+            </div>
+			<h3>淘宝简介</h3>
+			    
+			    淘宝致力于提供一个创新、开放、互信的在线交易市场，让购物变得更加便捷、有趣和安全。其愿景是成为全球最大的消费类社区，通过技术提升购物体验，推动商业进步。
+			    
+			    服务范围
+			    淘宝覆盖了几乎所有消费品类，包括但不限于服装、鞋帽、化妆品、家居用品、电子产品、图书、食品等。用户可以在淘宝上找到从日常用品到特色商品的各种选择。
+			    
+			    用户群体
+			    淘宝服务于广大的消费者和小型商家。消费者可以通过淘宝平台购买到来自全国各地乃至全球的商品，而小型商家则可以利用淘宝平台开设网店，销售自己的产品。
+			    
+			    交易安全
+			    淘宝注重交易安全，推出了支付宝作为安全的支付工具，提供担保交易服务，确保买卖双方的交易安全。
+			    
+			    创新技术
+			    淘宝不断采用最新技术，如大数据分析、人工智能推荐等，以提升用户体验和优化交易流程。
+			    
+			    社区文化
+			    淘宝不仅仅是一个购物平台，更是一个社区。用户可以参与评价、分享购物经验，形成了一个互动的购物社区。
+			    
+			    移动购物
+			    随着智能手机的普及，淘宝推出了移动应用，让用户能够随时随地进行购物，进一步推动了移动电商的发展。
+			    
+			    社会责任
+			    淘宝积极参与社会公益活动，通过平台的力量帮助小微企业发展，支持农村电商，促进就业和创新。
+			    
+			    发展历程
+			    自2003年成立以来，淘宝迅速成长为中国最大的在线零售平台。通过不断的创新和服务升级，淘宝已经成为亿万用户日常生活中不可或缺的一部分。
+        </div>
+    </div>
+   
+	   
+    <!-- 页脚 -->
+    <footer class="tb-footer">
+        <p>版权所有 © 淘宝 2024</p>
+    </footer>
+
+    <script src="js/new_file.js"></script>
+	<script src="js/轮播图.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.wrapper {
+			width: 900px;
+			height: 350px;
+			overflow: hidden;
+			margin: 0 auto;
+			position: relative;
+		}
+
+img {
+	width: 900px;
+	height: 350px;
+}
+
+.contain {
+	display: flex;
+	width: 4500px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.btn {
+	width: 150px;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+	left: 375px;
+	bottom: 10px;
+}
+
+.btn span {
+	display: block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid white;
+	border-radius: 50%;
+}
+
+.wrapper a {
+	text-decoration: none;
+	font-size: 50px;
+	color: red;
+	position: absolute;
+	top: 35%;
+}
+
+.wrapper a:nth-of-type(1) {
+	left: 10px;
+
+}
+
+.wrapper a:nth-of-type(2) {
+	right: 10px;
+}
+
+.active {
+	background-color: red;
+}

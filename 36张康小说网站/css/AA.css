@@ -1,0 +1,57 @@
+		#top {
+			height: 30px;
+			background-color:rgb(149,149,149);
+			line-height: 30px;
+			font-size: 15px;
+		}
+		
+		#top a {
+			color: black;
+		}
+		
+		#top .top_left a:hover {
+			color:blueviolet;
+		}
+		
+		.top_left a {
+			margin: 0px 10px;
+		}
+		
+		.top_left {
+			float: left;
+		} 
+		
+		.top_right {
+			margin-right: 10px;
+			float: right; 
+		}	
+		.hotword{
+			padding-top: 8px;
+			color:rgb(149,149,149);
+			}
+		.box{
+		width:400px;
+		height:30px;
+		border:1px solid black;
+		box-shadow: 0px 1px 2px #666;/* 阴影 */
+		margin:auto;
+		}
+		.input{
+		float:left;
+		width:304px;
+		height:28px;
+		border:none;/*取消文本框内外边框*/
+		}
+		.button{
+		float:left;
+		width:96px;
+		height:30px;
+		color:black;
+		background-color:white;/*将按钮背景设置为白色，字体设置为黑色*/
+		border:none;
+		}
+
+			
+	
+
+			

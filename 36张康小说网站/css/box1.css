@@ -1,0 +1,36 @@
+	.overall{
+        /* 设置窗口大小 */
+		float: right;
+        width: 400px;
+        height: 800px;
+		margin: auto; 
+		/* background-color: #90ef90; */
+    }
+	.content{
+        /* 设置相对定位 */
+        position: relative;
+        height: 400px;
+    }
+
+    .content ul{
+        /* 去除标签<ul><li></li></ul>默认加的样式 */
+        list-style-type: none;
+    }
+
+    .content ul>li{
+        width: 600px;
+        height: 300px;
+        /* 设置绝对定位 */
+        position: absolute;
+        /* 设置过度效果 时间为1s */
+        transition: 1s;
+        opacity: 0;
+    }
+    /* 设置每个图片的样式 */
+    .content ul>li img{    
+        /* 设置每一张图片的大小 */
+        width: 400px;
+        height: 800px;
+        /* 设置边框样式 */
+        border: 1px solid #0e0600;        
+    }

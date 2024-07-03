@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美观的文本展示首页</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+ body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #212B36;
+        }
+        .container {
+            margin-top: 0px;
+            color: #5C6AC4;
+            
+        }
+        .header {
+            background: #F4F5FA;
+            color: #5C6AC4;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .content {
+            margin-bottom: 50px;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 18px;
+        }
+        .content h2 {
+            margin-top: 20px;
+            font-size: 1.8em;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .content-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .content-item:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .content-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            flex: 1;
+            color: #007bff;
+        }
+        .content-item p {
+            margin: 0;
+            flex: 2;
+            padding-left: 20px;
+        }
+        .footer {
+            background: #F4F5FA;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            height: 40px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h2>常德职业技术学院</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2 style="color: #9C6ADE;">机电系软件大专2306</h2>
+            <p style="text-align: right;">2024_javaScript_实训作业</p>
+            <div id="people-container">
+                <!-- 这里将插入每个人的信息 -->
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>&copy; 2024 机电系软件大专2306 保留所有权利</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新浪微博下拉菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .nav {
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .nav>li {
+            float: left;
+        }
+        
+        .nav>li>a {
+            border: 1px solid rgb(199, 186, 6);
+            display: block;
+            width: 130px;
+        }
+        
+        .nav ul {
+            background-color: rgb(199, 186, 6);
+            line-height: 30px;
+            display: none;
+        }
+        
+        .nav ul>li:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <ul class="nav">
+            <li>
+                <a href="">动漫</a>
+                <ul>
+                    <li><a href="#">《鬼灭之刃》</a></li>
+                    <li><a href="#">《进击的巨人》</a></li>
+                    <li><a href="#">《时光代理人》</a></li>
+                    <li><a href="#">《时光代理人》</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">歌曲</a>
+                <ul>
+                    <li><a href="#">《空城》</a></li>
+                    <li><a href="#">《真相是真》</a></li>
+                    <li><a href="#">《真相是假》</a></li>
+                    <li><a href="#">《遇见》</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">电影</a>
+                <ul>
+                    <li><a href="#">《少年的你》</a></li>
+                    <li><a href="#">《奇迹笨小孩》</a></li>
+                    <li><a href="#">《长津湖》</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // 获取元素
+        var nav = document.querySelector('.nav');
+        var lis = nav.children;
+        console.log(nav);
+        // 循环注册事件
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function() {
+                this.children[1].style.display = 'block'; //里面的ul是他的第二个孩子
+            }
+            lis[i].onmouseleave = function() {
+                this.children[1].style.display = 'none'; //里面的ul是他的第二个孩子
+            }
+        }
+    </script>
+</body>
+
+</html>

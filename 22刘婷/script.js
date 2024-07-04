@@ -41,3 +41,16 @@ function autoRotate() {
   
 // 如果需要自动滚动，取消注释下一行  
 autoRotate();  
+
+
+
+function goToPage() {  
+    var select = document.getElementById("actionSelect");  
+    var value = select.options[select.selectedIndex].value;  
+  
+    if (value === "login") {  
+        window.location.href = "login.html"; // 假设你的登录页面是login.html  
+    } else if (value === "register") {  
+        window.location.href = "register.html"; // 假设你的注册页面是register.html  
+    }  
+}
